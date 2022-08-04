@@ -8,9 +8,11 @@
   width: 80%;
   height: 500px;
   border: 1px solid #333;
+  border-bottom: 12px solid #4E3B31;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
 .pipe {
@@ -21,9 +23,9 @@
 }
 
 .player {
-  width: 300px;
+  width: 150px;
   position: absolute;
-  bottom: 0;
+  bottom: -15px;
 }
 
 .jump {

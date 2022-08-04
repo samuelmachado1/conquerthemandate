@@ -11,12 +11,18 @@ const jump = () => {
 
 const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
-  // const playerPosition = window.getComputedStyled(player).bottom.replace('px', '');
-  // console.log('play posit', playerPosition)
+  const playerPosition = Number(window.getComputedStyle(player).bottom.replace('px', ''));
 
-  if (pipePosition <= 205) {
+  if (pipePosition <= 115 && pipePosition > 0 && playerPosition <= 105) {
     pipe.style.animation = 'none';
     pipe.style.left = `${pipePosition}px`
+
+    player.style.animation = 'none';
+    player.style.bottom = `${playerPosition}px`
+
+    // Adicionar imagem de game over
+
+    clearInterval(loop);
   }
 }, 10)
 document.addEventListener('keydown', jump);
