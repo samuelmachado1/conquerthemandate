@@ -13,16 +13,16 @@ const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
   const playerPosition = Number(window.getComputedStyle(player).bottom.replace('px', ''));
 
-  if (pipePosition <= 115 && pipePosition > 0 && playerPosition <= 105) {
-    pipe.style.animation = 'none';
-    pipe.style.left = `${pipePosition}px`
+  // if (pipePosition <= 115 && pipePosition > 0 && playerPosition <= 105) {
+  //   pipe.style.animation = 'none';
+  //   pipe.style.left = `${pipePosition}px`
 
-    player.style.animation = 'none';
-    player.style.bottom = `${playerPosition}px`
+  //   player.style.animation = 'none';
+  //   player.style.bottom = `${playerPosition}px`
 
-    // Adicionar imagem de game over
+  //   // Adicionar imagem de game over
 
-    clearInterval(loop);
-  }
+  //   clearInterval(loop);
+  // }
 }, 10)
 document.addEventListener('keydown', jump);

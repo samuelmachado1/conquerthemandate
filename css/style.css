@@ -28,6 +28,44 @@
   bottom: -15px;
 }
 
+.clouds {
+  position: absolute;
+  width: 250px;
+  animation: cloud-animation 20s infinite linear;
+}
+
+.towels {
+  position: absolute;
+  width: 300px;
+  right: -350px;
+  bottom: -1px;
+  transform-style: preserve-3d;
+  transform: perspective(5.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: towels-animation 10s 1 linear;
+}
+
+.catedral {
+  position: absolute;
+  width: 400px;
+  bottom: -1px;
+  right: -400px;  
+  transform-style: preserve-3d;
+  transform: perspective(5.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: catedral-animation 10s 1 linear;
+
+}
+
+.conic {
+  position: absolute;
+  width: 400px;
+  bottom: -1px;
+  right: -400px;  
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
+  animation: conic-animation 10s 1 linear 8s;
+
+}
+
 .jump {
   animation: jump 500ms ease-out;
 }
@@ -64,4 +102,41 @@
     bottom: 0px;
   }
 
+}
+
+@keyframes cloud-animation {
+  from {
+    right: -250px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+@keyframes towels-animation {
+  from {
+    right: -450px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+@keyframes catedral-animation {
+  from {
+    right: -650px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+@keyframes conic-animation {
+  from {
+    right: -650px;
+  }
+
+  to {
+    right: 100%;
+  }
 }
