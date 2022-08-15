@@ -55,6 +55,28 @@
 
 }
 
+.arvore1 {
+  position: absolute;
+  width: 150px;
+  bottom: -1px;
+  right: -300px;  
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
+  animation: arvore1-animation 10s 2 linear 3s;
+
+}
+
+.arvore2 {
+  position: absolute;
+  width: 100px;
+  bottom: -1px;
+  right: -200px;  
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
+  animation: arvore2-animation 10s 2 linear 4s;
+
+}
+
 .conic {
   position: absolute;
   width: 400px;
@@ -65,6 +87,51 @@
   animation: conic-animation 10s 1 linear 8s;
 
 }
+
+.arvore {
+  position: absolute;
+  width: 150px;
+  bottom: -1px;
+  right: -300px;  
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
+  animation: arvore-animation 9s 3 linear 9s;
+
+}
+
+.arvore6 {
+  position: absolute;
+  width: 100px;
+  bottom: -1px;
+  right: -200px;  
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
+  animation: arvore6-animation 9s 3 linear 11s;
+
+}
+
+.arvore4 {
+  position: absolute;
+  width: 200px;
+  bottom: -1px;
+  right: -300px;  
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
+  animation: arvore4-animation 10s 2 linear 12s;
+
+}
+
+.arvore5 {
+  position: absolute;
+  width: 150px;
+  bottom: -1px;
+  right: -200px;  
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
+  animation: arvore5-animation 9s 2 linear 12s;
+
+}
+
 
 .jump {
   animation: jump 500ms ease-out;
@@ -131,7 +198,68 @@
     right: 100%;
   }
 }
+
+@keyframes arvore1-animation {
+  from {
+    right: -650px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes arvore2-animation {
+  from {
+    right: -650px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
 @keyframes conic-animation {
+  from {
+    right: -650px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes arvore-animation {
+  from {
+    right: -650px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes arvore6-animation {
+  from {
+    right: -650px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes arvore4-animation {
+  from {
+    right: -650px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes arvore5-animation {
   from {
     right: -650px;
   }
