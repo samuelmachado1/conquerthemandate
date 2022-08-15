@@ -62,7 +62,7 @@
   right: -300px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: arvore1-animation 10s 2 linear 3s;
+  animation: arvore1-animation 17s 2 linear 3s;
 
 }
 
@@ -73,7 +73,7 @@
   right: -200px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: arvore2-animation 10s 2 linear 4s;
+  animation: arvore2-animation 18s 2 linear 4s;
 
 }
 
