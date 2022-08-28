@@ -36,17 +36,17 @@
   right: -240px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: arvore1-animation 8s 1 linear 7.7s;
+  animation: arvore1-animation 8s 1 linear 7.5s;
 }
 
 .arvore2 {
   position: absolute;
-  width: 200px;
+  width: 120px;
   bottom: -1px;
   right: -200px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: arvore1-animation 8s 1 linear 6s;
+  animation: arvore1-animation 17s 1 linear 1.6s;
 }
 
 .arvore4 {
@@ -66,7 +66,7 @@
   right: -200px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: arvore5-animation 10.5s 2 linear 15.6s;
+  /* animation: arvore5-animation 11.5s 1 linear 12.6s; */
 
 }
 
@@ -253,7 +253,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 12s 1 linear 19s;
+  animation: casa1-animation 10.3s 1 linear 18s;
 }
 
 .casa5 {
@@ -263,7 +263,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 12s 1 linear 21s;
+  animation: casa1-animation 10.5s 1 linear 20s;
 }
 
 .casaMarrom {
@@ -575,7 +575,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(10deg) rotateY(6deg);
-  animation: casa1-animation 13.4s 1 linear 55.6s;
+  animation: casa1-animation 15.1s 1 linear 55.6s;
 }
 
 .pracaRelogio {
@@ -648,6 +648,87 @@
 
 
 /* Recanto */
+.casaMenor1Recanto {
+  position: absolute;
+  width: 135px;
+  bottom: -4px;
+  right: -136px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 16.7s 1 linear 75.7s;
+}
+
+.casaMenor2Recanto {
+  position: absolute;
+  width: 80px;
+  bottom: -4px;
+  right: -85px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 16.7s 1 linear 74.2s;
+}
+
+.casaMenor3Recanto {
+  position: absolute;
+  width: 110px;
+  bottom: -4px;
+  right: -112px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 16.7s 1 linear 73.6s;
+}
+
+.casaMenor4Recanto {
+  position: absolute;
+  width: 60px;
+  bottom: -1px;
+  right: -85px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 16.7s 1 linear 74.7s;
+}
+
+.casaMenor5Recanto {
+  position: absolute;
+  width: 135px;
+  bottom: -4px;
+  right: -136px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 16.7s 1 linear 71.9s;
+}
+
+.casaMenor6Recanto {
+  position: absolute;
+  width: 80px;
+  bottom: -4px;
+  right: -85px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 16.7s 1 linear 69.3s;
+}
+
+.casaMenor7Recanto {
+  position: absolute;
+  width: 110px;
+  bottom: -4px;
+  right: -112px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 16.7s 1 linear 67.4s;
+}
+
+.casaMenorIgrejaRecanto {
+  position: absolute;
+  width: 130px;
+  bottom: -4px;
+  right: -132px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 16.7s 1 linear 67s;
+}
+
+
 .emas {
   position: absolute;
   width: 160px;
@@ -675,18 +756,18 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(10deg) rotateY(6deg);
-  animation: casa1-animation 12.1s 1 linear 75s;
+  /* animation: casa1-animation 12.1s 1 linear 75s; */
 }
 
 /* São Sebas */
 .morroDaCruz {
   position: absolute;
-  width: 600px;
+  width: 590px;
   bottom: -15px;
-  right: -640px;  
+  right: -592px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(23deg) rotateY(-10deg);
-  animation: casa1-animation 12.7s 1 linear 96s;
+  animation: casa1-animation 12.4s 1 linear 96s;
 }
 
 .casa22 {
@@ -696,7 +777,7 @@
   right: -138px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 14.5s 1 linear 90.5s;
+  animation: casa1-animation 13.5s 1 linear 90.5s;
 }
 
 .casa23 {
@@ -706,7 +787,7 @@
   right: -85px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 14.5s 1 linear 90.9s;
+  animation: casa1-animation 13.5s 1 linear 90.9s;
 }
 
 .casa24 {
@@ -716,7 +797,7 @@
   right: -112px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 14.5s 1 linear 91.5s;
+  animation: casa1-animation 13.5s 1 linear 91.5s;
 }
 
 .casa25 {
@@ -736,7 +817,7 @@
   right: -231px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 13.8s 1 linear 95.3s;
+  animation: casa1-animation 13.8s 1 linear 98.3s;
 }
 
 .casa27 {
@@ -746,7 +827,7 @@
   right: -341px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 13.8s 1 linear 97s;
+  animation: casa1-animation 13.8s 1 linear 100s;
 }
 
 .casa28 {
@@ -756,7 +837,7 @@
   right: -138px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 13s 1 linear 94.2s;
+  animation: casa1-animation 13s 1 linear 97.2s;
 }
 
 .casa29 {
@@ -766,7 +847,7 @@
   right: -85px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 13s 1 linear 95.3s;
+  animation: casa1-animation 13s 1 linear 99.8s;
 }
 
 .casa30 {
@@ -776,7 +857,7 @@
   right: -112px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 13s 1 linear 96.4s;
+  animation: casa1-animation 13s 1 linear 100.9s;
 }
 /* Plano piloto */
 
@@ -788,7 +869,7 @@
   bottom: -2px;
   transform-style: preserve-3d;
   transform: perspective(5.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: towels-animation 12s 1 linear 116s;
+  animation: towels-animation 10.7s 1 linear 115s;
 }
 
 .catedral {
@@ -798,7 +879,7 @@
   right: -400px;  
   transform-style: preserve-3d;
   transform: perspective(5.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: catedral-animation 10s 1 linear 119s;
+  animation: catedral-animation 10s 1 linear 116s;
 
 }
 
@@ -809,7 +890,7 @@
   right: -400px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: conic-animation 10s 1 linear 121s;
+  animation: conic-animation 10s 1 linear 122s;
 }
 
 .ponteJK {
@@ -819,7 +900,7 @@
   right: -850px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: ponteJk-animation 12s 1 linear 112s;
+  animation: ponteJk-animation 12s 1 linear 110s;
 }
 
 .arvore {
@@ -854,7 +935,7 @@
   right: -500px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: ibaneis-animation 10s 1 linear 8s;
+  animation: ibaneis-animation 10s 1 ease-in 22s;
 
 }
 .arrudas {
@@ -910,26 +991,26 @@
 
 .ipeDerrubada {
   position: absolute;
-  width: 105px;
+  width: 120px;
   bottom: -1px;
   right: -145px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: octavio-animation 8s 1 linear 14s;
+  animation: octavio-animation 8.7s 1 linear 14s;
 }
 .ipeDerrubada2 {
  position: absolute;
-  width: 105px;
+  width: 90px;
   bottom: -1px;
   right: -145px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: octavio-animation 8s 1 linear 14.4s;
+  animation: octavio-animation 8.3s 1 linear 14.4s;
 }
 
 .ipeDerrubada3 {
   position: absolute;
-  width: 105px;
+  width: 130px;
   bottom: -1px;
   right: -145px;  
   transform-style: preserve-3d;
@@ -938,21 +1019,21 @@
 }
 .ipeDerrubada4 {
  position: absolute;
-  width: 135px;
+  width: 138px;
   bottom: -1px;
   right: -145px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: octavio-animation 8s 1 linear 15s;
+  animation: octavio-animation 7.5s 1 linear 15s;
 }
 .ipeDerrubada5 {
   position: absolute;
-  width: 105px;
+  width: 75px;
   bottom: -1px;
   right: -145px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: octavio-animation 6.1s 1 linear 15.3s;
+  animation: octavio-animation 7.2s 1 linear 15.3s;
 }
 .ipeDerrubada6 {
  position: absolute;
@@ -961,7 +1042,7 @@
   right: -145px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: octavio-animation 6s 1 linear 15.9s;
+  animation: octavio-animation 6.6s 1 linear 15.9s;
 }
 
 .jump {
