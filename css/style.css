@@ -313,7 +313,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 12s 1 linear 41.5s;
+  animation: casa1-animation 12s 1 linear 41.9s;
 }
 .casa10 {
   position: absolute;
@@ -322,7 +322,7 @@
   right: -370px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 12s 1 linear 43.5s;
+  animation: casa1-animation 12s 1 linear 43.9s;
 }
 .casa11 {
   position: absolute;
@@ -484,7 +484,7 @@
   bottom: -48px;
   transform-style: preserve-3d;
   transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: casa1-animation 12.1s 1 linear 23.3s;
+  animation: casa1-animation 12.1s 1 linear 22.9s;
 }
 
 .dogNPC4 {
@@ -532,11 +532,31 @@
   position: absolute;
   width: 750px;
   bottom: -55px;
-  right: -2800px;  
+  right: -760px;  
   transform-style: preserve-3d;
   transform: perspective(9.5cm) rotateX(8deg) rotateY(-4deg);
   animation: cantador-animation 12s 1 linear 38s;
 }
+
+.populacaoCantador {
+  position: absolute;
+  width: 200px;
+  bottom: -60px;
+  right: -2800px;  
+  transform-style: preserve-3d;
+  transform: perspective(9.5cm) rotateX(8deg) rotateY(-4deg);
+  animation: cantador-animation 12s 1 linear 39.4s;
+}
+
+/* .cantador {
+  position: absolute;
+  width: 750px;
+  bottom: -55px;
+  right: -2800px;  
+  transform-style: preserve-3d;
+  transform: perspective(9.5cm) rotateX(8deg) rotateY(-4deg);
+  animation: cantador-animation 12s 1 linear 38s;
+} */
 
 .caixaDagua {
   position: absolute;
@@ -565,7 +585,7 @@
   right: -290px;  
   transform-style: preserve-3d;
   transform: perspective(50cm) rotateX(-10deg) rotateY(1deg);
-  animation: casa1-animation 8s 1 linear 56.6s;
+  animation: casa1-animation 8.2s 1 linear 56.6s;
 }
 
 .opalaTagua {
@@ -847,7 +867,7 @@
   right: -85px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 13s 1 linear 99.8s;
+  animation: casa1-animation 13.8s 1 linear 99.5s;
 }
 
 .casa30 {
@@ -857,10 +877,70 @@
   right: -112px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 13s 1 linear 100.9s;
+  animation: casa1-animation 13.8s 1 linear 100.5s;
 }
 /* Plano piloto */
 
+
+.placaProibidoCei {
+  position: absolute;
+  width: 400px;
+  right: -320px;
+  bottom: -85px;
+  transform-style: preserve-3d;
+  transform: perspective(5.5cm) rotateX(15deg) rotateY(-2deg);
+  animation: towels-animation 10.9s 1 linear 113.5s;
+}
+
+.placaProibidoCeiMenor1 {
+  position: absolute;
+  width: 200px;
+  right: -320px;
+  bottom: -45px;
+  transform-style: preserve-3d;
+  transform: perspective(5.5cm) rotateX(15deg) rotateY(-2deg);
+  animation: towels-animation 10.9s 1 linear 118.7s;
+}
+
+.placaProibidoCeiMenor2 {
+  position: absolute;
+  width: 200px;
+  right: -320px;
+  bottom: -45px;
+  transform-style: preserve-3d;
+  transform: perspective(5.5cm) rotateX(15deg) rotateY(-2deg);
+  animation: towels-animation 10.9s 1 linear 113.7s;
+}
+
+.npcPlacaProibidoCeiMenor {
+  position: absolute;
+  width: 52px;
+  right: -63px;
+  bottom: -43px;
+  transform-style: preserve-3d;
+  transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
+  animation: towels-animation 10.9s 1 linear 113.4s;
+}
+
+.npcPlacaProibidoCeiMenor2 {
+  position: absolute;
+  width: 52px;
+  right: -63px;
+  bottom: -43px;
+  transform-style: preserve-3d;
+  transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
+  animation: towels-animation 10.9s 1 linear 113s;
+}
+
+.npcPlacaProibidoCeiMenor3 {
+  position: absolute;
+  width: 40px;
+  right: -63px;
+  bottom: -30px;
+  transform-style: preserve-3d;
+  transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
+  animation: towels-animation 10.8s 1 linear 113.2s;
+}
 
 .catedralTowels {
   position: absolute;
@@ -869,7 +949,7 @@
   bottom: -2px;
   transform-style: preserve-3d;
   transform: perspective(5.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: towels-animation 10.7s 1 linear 115s;
+  animation: towels-animation 10.7s 1 linear 116.3s;
 }
 
 .catedral {
@@ -879,7 +959,7 @@
   right: -400px;  
   transform-style: preserve-3d;
   transform: perspective(5.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: catedral-animation 10s 1 linear 116s;
+  animation: catedral-animation 10s 1 linear 116.5s;
 
 }
 
@@ -935,7 +1015,7 @@
   right: -500px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: ibaneis-animation 10s 1 ease-in 22s;
+  animation: ibaneis-animation 9.6s 1 ease-in-out alternate -2s;
 
 }
 .arrudas {
@@ -1046,7 +1126,7 @@
 }
 
 .jump {
-  animation: jump 500ms ease-out;
+  animation: jump 500ms ease-in;
 }
 
 .player {
@@ -1072,22 +1152,39 @@
   }
 
   20% {
-    bottom: 190px;
+    bottom: 160px;
+  }
+ 
+  30% {
+    bottom: 200px;
   }
   
   40% {
-    bottom: 220px;
+    bottom: 230px;
   }
 
   50% {
-    bottom: 220px;
+    bottom: 250px;
   }
 
   65% {
-    bottom: 220px;
+    bottom: 250px;
   }
   
-  85% {
+  
+  75% {
+    bottom: 200px;
+  }
+
+  83% {
+    bottom: 190px;
+  }
+  
+  90% {
+    bottom: 175px;
+  }
+  
+  95% {
     bottom: 160px;
   }
 

@@ -1,4 +1,4 @@
-const pipe = document.querySelector('.pipe');
+const pipe = document.querySelector('.ibaneis');
 const player = document.querySelector('.player');
 let cont = 0;
 
@@ -7,7 +7,7 @@ const jump = () => {
 
   setTimeout(() => {
     player.classList.remove('jump');
-  }, 500)
+  }, 700)
 }
 
 const right = () => {
@@ -50,22 +50,27 @@ const right = () => {
   }, 500)
 }
 
-// const loop = setInterval(() => {
-//   const pipePosition = pipe.offsetLeft;
-//   const playerPosition = Number(window.getComputedStyle(player).bottom.replace('px', ''));
+const loop = setInterval(() => {
+  const pipePosition = pipe.offsetLeft;
+  const playerPosition = Number(window.getComputedStyle(player).bottom.replace('px', ''));
+  const playerRigthPosition = Number(window.getComputedStyle(player).right.replace('px', ''));
 
-//   // if (pipePosition <= 115 && pipePosition > 0 && playerPosition <= 105) {
-//   //   pipe.style.animation = 'none';
-//   //   pipe.style.left = `${pipePosition}px`
+  console.log('playerPosition', playerRigthPosition, pipePosition);
 
-//   //   player.style.animation = 'none';
-//   //   player.style.bottom = `${playerPosition}px`
+  if (pipePosition >= playerRigthPosition && pipePosition > 0 && playerRigthPosition <= 1024) {
+    pipe.style.animation = 'none';
+    pipe.style.left = `${pipePosition}px`
 
-//   //   // Adicionar imagem de game over
+    player.style.animation = 'none';
+    player.style.right = `${playerRigthPosition}px`
 
-//   //   clearInterval(loop);
-//   // }
-// }, 10)
+    // location.reload();
+
+    // Adicionar imagem de game over
+
+    clearInterval(loop);
+  }
+}, 10)
 
 
 
