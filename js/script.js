@@ -1,5 +1,6 @@
 const pipe = document.querySelector('.ibaneis');
 const player = document.querySelector('.player');
+const entulho = document.querySelector('.entulho1');
 let cont = 0;
 
 const jump = () => {
@@ -35,7 +36,7 @@ const right = () => {
     if (cont == 0) {
       cont = 1026;
       document.querySelector('.player').style.right = '1026px';
-    } else if (cont <= 1026) {
+    } else if (cont <= 1026 && cont >= 329) {
       cont -= 28;
       document.querySelector('.player').style.right = `${cont}px`
     }
@@ -51,25 +52,35 @@ const right = () => {
 }
 
 const loop = setInterval(() => {
-  const pipePosition = pipe.offsetLeft;
-  const playerPosition = Number(window.getComputedStyle(player).bottom.replace('px', ''));
+
+  // console.log('posição do player: ', window.getComputedStyle(player));
+  // const pipePosition = pipe.offsetLeft;
+  const playerLeftPosition = Number(window.getComputedStyle(player).left.replace('px', ''));
   const playerRigthPosition = Number(window.getComputedStyle(player).right.replace('px', ''));
+  const entulhoRightPosition = Number(window.getComputedStyle(entulho).right.replace('px', ''));
+  const entulhoBottomPosition = Number(window.getComputedStyle(entulho).bottom.replace('px', ''));
+  const entulhoTopPosition = Number(window.getComputedStyle(entulho).top.replace('px', ''));
+  const playerTopPosition = Number(window.getComputedStyle(player).top.replace('px', ''));
+  const playerBottomPosition = Number(window.getComputedStyle(player).bottom.replace('px', ''));
 
-  console.log('playerPosition', playerRigthPosition, pipePosition);
+  // console.log('BOTTOM', playerTopPosition, entulhoTopPosition);
+  // console.log('playerHeigth', playerBottomPosition, playerTopPosition);
 
-  if (pipePosition >= playerRigthPosition && pipePosition > 0 && playerRigthPosition <= 1024) {
-    pipe.style.animation = 'none';
-    pipe.style.left = `${pipePosition}px`
+  let somaEnt = playerRigthPosition - 205;
+  let posEnt = entulhoRightPosition + 205;
+  console.log('Position', entulhoRightPosition, somaEnt);
 
-    player.style.animation = 'none';
-    player.style.right = `${playerRigthPosition}px`
-
-    // location.reload();
-
-    // Adicionar imagem de game over
-
-    clearInterval(loop);
+  // console.log('somaEnt', somaEnt);
+  if (entulhoRightPosition >= somaEnt) {
+    console.log('!!!!!!!!ENTULHO!!!!!!!!');
+    document.querySelector('.player').style.right = `${posEnt}px`
+    document.querySelector('.entulho1').style.right = `${entulhoRightPosition}px`
+    document.querySelector('.entulho1').style.animation = "none";
+    // document.querySelector('.entulho1').style.right = `${entulhoRightPosition}px`
+    // document.querySelector('.entulho1').style.animation = '';
   }
+
+
 }, 10)
 
 

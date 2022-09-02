@@ -256,6 +256,26 @@
   animation: casa1-animation 10.3s 1 linear 18s;
 }
 
+.entulho2 {
+  position: absolute;
+  width: 600px;
+  bottom: -242px;
+  right: -601px;  
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
+  animation: octavio-animation 5.3s 1 linear 20.9s;
+}
+
+.jkShop {
+  position: absolute;
+  width: 390px;
+  bottom: -60px;
+  right: -440px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: shop-animation 22.1s 1 linear 10.3s;
+}
+
 .casa5 {
   position: absolute;
   width: 350px;
@@ -273,7 +293,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 12s 1 linear 27s;
+  animation: casa1-animation 12s 1 linear 28.3s;
 }
 
 .casa7 {
@@ -283,7 +303,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 12s 1 linear 30s;
+  animation: casa1-animation 12s 1 linear 30.4s;
 }
 
 .casa8 {
@@ -293,7 +313,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 12s 1 linear 32s;
+  animation: casa1-animation 12s 1 linear 32.5s;
 }
 
 .arvoreCasa8 {
@@ -303,7 +323,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 11s 1 linear 31.7s;
+  animation: casa1-animation 11s 1 linear 33.9s;
 }
 
 .casa9 {
@@ -445,7 +465,7 @@
   right: -440px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(5deg) rotateY(6deg);
-  animation: casa1-animation 12s 1 linear 24s;
+  animation: casa1-animation 12s 1 linear 24.7s;
 }
 
 .dogNPC {
@@ -455,7 +475,7 @@
   bottom: -43px;
   transform-style: preserve-3d;
   transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: casa1-animation 12.3s 1 linear 21.7s;
+  animation: casa1-animation 12.3s 1 linear 24.5s;
 }
 
 .dogNPC1 {
@@ -465,19 +485,9 @@
   bottom: -48px;
   transform-style: preserve-3d;
   transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: casa1-animation 12.1s 1 linear 21.6s;
+  animation: casa1-animation 12.1s 1 linear 22.5s;
 }
 .dogNPC2 {
-  position: absolute;
-  width: 65px;
-  right: -66px;
-  bottom: -48px;
-  transform-style: preserve-3d;
-  transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: casa1-animation 12.1s 1 linear 22.1s;
-}
-
-.dogNPC6 {
   position: absolute;
   width: 65px;
   right: -66px;
@@ -487,6 +497,16 @@
   animation: casa1-animation 12.1s 1 linear 22.9s;
 }
 
+.dogNPC6 {
+  position: absolute;
+  width: 65px;
+  right: -66px;
+  bottom: -48px;
+  transform-style: preserve-3d;
+  transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
+  animation: casa1-animation 12.1s 1 linear 25.4s;
+}
+
 .dogNPC4 {
   position: absolute;
   width: 65px;
@@ -494,7 +514,7 @@
   bottom: -48px;
   transform-style: preserve-3d;
   transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: casa1-animation 12.1s 1 linear 24s;
+  animation: casa1-animation 12.1s 1 linear 23.7s;
 }
 
 .dogNPC3 {
@@ -504,7 +524,7 @@
   bottom: -43px;
   transform-style: preserve-3d;
   transform: perspective(4.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: casa1-animation 12.3s 1 linear 24.2s;
+  animation: casa1-animation 12.3s 1 linear 23.4s;
 }
 
 .dogNPC5 {
@@ -514,7 +534,7 @@
   bottom: -54px;
   transform-style: preserve-3d;
   transform: perspective(4.5cm) rotateX(35deg) rotateY(10deg);
-  animation: casa1-animation 12.1s 1 linear 24.2s;
+  animation: casa1-animation 12.1s 1 linear 26.2s;
 }
 
 
@@ -658,9 +678,9 @@
 
 .arvore2Npc3 {
   position: absolute;
-  width: 180px;
-  bottom: -4px;
-  right: -200px;  
+  width: 250px;
+  bottom: 1px;
+  right: -251px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: towels-animation 12.8s 1 linear 10.6s;
@@ -759,6 +779,16 @@
   animation: casa1-animation 14s 1 linear 72s;
 }
 
+.bozoquina {
+  position: absolute;
+  width: 190px;
+  bottom: -15px;
+  right: -440px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: casa1-animation 12.6s 1 linear 74s;
+}
+
 .bau {
   position: absolute;
   width: 520px;
@@ -766,7 +796,7 @@
   right: -730px;  
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: casa1-animation 10.6s 1 linear 74.9s;
+  animation: casa1-animation 10s 1 linear 78s;
 }
 
 .opalaEmas {
@@ -1000,11 +1030,12 @@
   position: absolute;
   width: 600px;
   bottom: -242px;
-  right: -601px;  
+  right: -280px;  
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: arvore1-animation 8.4s 1 linear 1s;
+  animation: entulho-animation 8.4s 1 linear 3s;
 }
+
 
 /* Inimigos */
 
@@ -1067,6 +1098,16 @@
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 5s 1 linear 18.2s;
+}
+
+.octavioMenor2 {
+  position: absolute;
+  width: 120px;
+  bottom: -25px;
+  right: -122px;  
+  transform-style: preserve-3d;
+  transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
+  animation: octavio-animation 5s 1 linear 23.8s;
 }
 
 .ipeDerrubada {
@@ -1324,6 +1365,16 @@
   }
 }
 
+@keyframes entulho-animation {
+  from {
+    right: -200px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
 @keyframes caixaDagua-animation {
   from {
     right: -650px;
@@ -1331,6 +1382,28 @@
 
   to {
     right: 100%;
+  }
+}
+
+@keyframes shop-animation {
+  0% {
+    right: -650px;
+    bottom: -391px;
+  }
+
+  30% {
+    right: -700px;
+    bottom: -105px;
+  }
+
+  60% {
+    right: -750px;
+    bottom: -95px;
+  }
+
+  100% {
+    right: 100%;
+    bottom: -60px;
   }
 }
 
