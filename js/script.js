@@ -2,6 +2,9 @@ const dino = document.querySelector(".dino");
 const cacto = document.querySelector(".cacto");
 const catraca = document.querySelector(".catraca");
 const score = document.querySelector(".score");
+const moedas = document.querySelector(".moedas");
+const moedas2 = document.querySelector(".moedas2");
+const moedas3 = document.querySelector(".moedas3");
 const buraco = document.querySelector(".buraco");
 const pastel = document.querySelector(".pastel");
 const combo = document.querySelector(".combo");
@@ -60,7 +63,7 @@ setInterval(() => {
   console.log(comboLeft, pastelLeft, dinoBottom);
 
   if (cactoLeft > 40 && cactoLeft < 175 && dinoBottom <= 50 && !alreadyJump) {
-    alert(`Game Over! Seu score foi: ${placar}`);
+    moedas3.style.left = 80 + "px";
     count = 0;
   }
   if (catracaLeft > -200 && catracaLeft < -100 && dinoBottom <= 50 && !alreadyJump) {
