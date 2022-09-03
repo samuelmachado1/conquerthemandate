@@ -1,88 +1,54 @@
-const pipe = document.querySelector('.ibaneis');
-const player = document.querySelector('.player');
-const entulho = document.querySelector('.entulho1');
-let cont = 0;
+const dino = document.querySelector(".dino");
+const cacto = document.querySelector(".cacto");
+const catraca = document.querySelector(".catraca");
+const score = document.querySelector(".score");
+let alreadyJump = false;
+let count = 0;
 
-const jump = () => {
-  player.classList.add('jump');
-
-  setTimeout(() => {
-    player.classList.remove('jump');
-  }, 700)
-}
-
-const right = () => {
-  var tecla = event.keyCode;
-
-  if (tecla == 13) {
-
-    console.log('enter');
-
-  } else if (tecla == 27) {
-
-    console.log('esc');
-
-  } else if (tecla == 37) {
-    if (cont < 1026 && cont !== 0) {
-      cont += 25;
-      document.querySelector('.player').style.right = `${cont}px`
-    }
-
-  } else if (tecla == 38) {
-
+document.addEventListener("keydown", (e) => {
+  if ((e.code === "ArrowUp") | (e.code === "Space")) {
     jump();
-
-  } else if (tecla == 39) {
-    if (cont == 0) {
-      cont = 1026;
-      document.querySelector('.player').style.right = '1026px';
-    } else if (cont <= 1026 && cont >= 329) {
-      cont -= 28;
-      document.querySelector('.player').style.right = `${cont}px`
-    }
-  } else if (tecla == 40) {
-
-    console.log('down');
-
   }
+});
 
-  setTimeout(() => {
-    player.classList.remove('right');
-  }, 500)
+function jump() {
+  if (!dino.classList.contains("jump")) {
+    dino.classList.add("jump");
+    alreadyJump = true;
+
+    setTimeout(() => {
+      dino.classList.remove("jump");
+      alreadyJump = false;
+    }, 1100);
+  }
 }
 
-const loop = setInterval(() => {
+setInterval(() => {
+  let dinoBottom = parseInt(
+    window.getComputedStyle(dino).getPropertyValue("bottom")
+  );
+  let cactoLeft = parseInt(
+    window.getComputedStyle(cacto).getPropertyValue("left")
+  );
+  let catracaLeft = parseInt(
+    window.getComputedStyle(catraca).getPropertyValue("left")
+  );
 
-  // console.log('posição do player: ', window.getComputedStyle(player));
-  // const pipePosition = pipe.offsetLeft;
-  const playerLeftPosition = Number(window.getComputedStyle(player).left.replace('px', ''));
-  const playerRigthPosition = Number(window.getComputedStyle(player).right.replace('px', ''));
-  const entulhoRightPosition = Number(window.getComputedStyle(entulho).right.replace('px', ''));
-  const entulhoBottomPosition = Number(window.getComputedStyle(entulho).bottom.replace('px', ''));
-  const entulhoTopPosition = Number(window.getComputedStyle(entulho).top.replace('px', ''));
-  const playerTopPosition = Number(window.getComputedStyle(player).top.replace('px', ''));
-  const playerBottomPosition = Number(window.getComputedStyle(player).bottom.replace('px', ''));
+  console.log(catracaLeft, alreadyJump);
 
-  // console.log('BOTTOM', playerTopPosition, entulhoTopPosition);
-  // console.log('playerHeigth', playerBottomPosition, playerTopPosition);
-
-  let somaEnt = playerRigthPosition - 205;
-  let posEnt = entulhoRightPosition + 205;
-  console.log('Position', entulhoRightPosition, somaEnt);
-
-  // console.log('somaEnt', somaEnt);
-  if (entulhoRightPosition >= somaEnt) {
-    console.log('!!!!!!!!ENTULHO!!!!!!!!');
-    document.querySelector('.player').style.right = `${posEnt}px`
-    document.querySelector('.entulho1').style.right = `${entulhoRightPosition}px`
-    document.querySelector('.entulho1').style.animation = "none";
-    // document.querySelector('.entulho1').style.right = `${entulhoRightPosition}px`
-    // document.querySelector('.entulho1').style.animation = '';
+  if (cactoLeft > 40 && cactoLeft < 120 && dinoBottom <= 50 && !alreadyJump) {
+    alert(`Game Over! Seu score foi: ${count}`);
+    count = 0;
+  }
+  if (catracaLeft > -200 && catracaLeft < -150 && dinoBottom <= 50 && !alreadyJump) {
+    alert(`Game Over! Seu score foi: ${count}`);
+    count = 0;
+  }
+  if (count > 13000) {
+    alert(`VOTE 50100!`);
+    count = 0;
   }
 
-
-}, 10)
-
-
-
-document.addEventListener('keydown', right);
+  count++;
+  score.innerHTML = `SCORE: ${count}`;
+}, 10);
