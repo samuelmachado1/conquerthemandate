@@ -2,6 +2,7 @@ const dino = document.querySelector(".dino");
 const cacto = document.querySelector(".cacto");
 const catraca = document.querySelector(".catraca");
 const score = document.querySelector(".score");
+const buraco = document.querySelector(".buraco");
 let alreadyJump = false;
 let count = 0;
 
@@ -33,8 +34,11 @@ setInterval(() => {
   let catracaLeft = parseInt(
     window.getComputedStyle(catraca).getPropertyValue("left")
   );
+  let buracoLeft = parseInt(
+    window.getComputedStyle(buraco).getPropertyValue("left")
+  );
 
-  console.log(catracaLeft, alreadyJump);
+  console.log(buracoLeft, alreadyJump);
 
   if (cactoLeft > 40 && cactoLeft < 120 && dinoBottom <= 50 && !alreadyJump) {
     alert(`Game Over! Seu score foi: ${count}`);
@@ -44,7 +48,11 @@ setInterval(() => {
     alert(`Game Over! Seu score foi: ${count}`);
     count = 0;
   }
-  if (count > 13000) {
+  if (buracoLeft > -200 && buracoLeft < 110 && dinoBottom <= 50 && !alreadyJump) {
+    alert(`Game Over! Seu score foi: ${count}`);
+    count = 0;
+  }
+  if (count > 13350) {
     alert(`VOTE 50100!`);
     count = 0;
   }
