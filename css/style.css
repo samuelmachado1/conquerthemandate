@@ -43,7 +43,7 @@
   right: 1200px;
   background-size: 130px;
   background-repeat: no-repeat;
-  animation: cacto 4s linear 1 8s;
+  animation: cacto 4s linear 1 7s;
 }
 .catraca{
   position: absolute;
@@ -54,7 +54,7 @@
   right: 1200px;
   background-size: 580px;
   background-repeat: no-repeat;
-  animation: catraca 4s linear 1  12s;
+  animation: catraca 4s linear 1  24s;
 }
 
 .enemyEntulho{
@@ -66,7 +66,7 @@
   right: 1200px;
   background-size: 600px;
   background-repeat: no-repeat;
-  animation: catraca 4s linear 1 13s;
+  animation: catraca 4s linear 1 19s;
 }
 
 .buraco{
@@ -80,7 +80,7 @@
   background-repeat: no-repeat;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
-  animation: cacto 4s linear 1  13s;
+  animation: cacto 4.3s linear 1  14s;
 }
 
 .pastel {
@@ -91,6 +91,18 @@
   height: 390px;
   right: 1200px;
   background-size: 390px;
+  background-repeat: no-repeat;
+  animation: catraca 6.5s linear 2 10s;
+}
+
+.combo {
+  position: absolute;
+  bottom: 10px;
+  background-image: url(../images/combo.png);
+  width: 490px;
+  height: 490px;
+  right: 1200px;
+  background-size: 490px;
   background-repeat: no-repeat;
   animation: catraca 6.5s linear 1 1s;
 }

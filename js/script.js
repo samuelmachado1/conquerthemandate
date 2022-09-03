@@ -4,6 +4,7 @@ const catraca = document.querySelector(".catraca");
 const score = document.querySelector(".score");
 const buraco = document.querySelector(".buraco");
 const pastel = document.querySelector(".pastel");
+const combo = document.querySelector(".combo");
 const enemyEntulho = document.querySelector(".enemyEntulho");
 let alreadyJump = false;
 let count = 0;
@@ -34,6 +35,12 @@ setInterval(() => {
   let pastelLeft = parseInt(
     window.getComputedStyle(pastel).getPropertyValue("left")
   );
+  let comboBottom = parseInt(
+    window.getComputedStyle(combo).getPropertyValue("bottom")
+  );
+  let comboLeft = parseInt(
+    window.getComputedStyle(combo).getPropertyValue("left")
+  );
   let dinoBottom = parseInt(
     window.getComputedStyle(dino).getPropertyValue("bottom")
   );
@@ -50,7 +57,7 @@ setInterval(() => {
     window.getComputedStyle(buraco).getPropertyValue("left")
   );
 
-  console.log(pastelBottom, pastelLeft, dinoBottom);
+  console.log(comboLeft, pastelLeft, dinoBottom);
 
   if (cactoLeft > 40 && cactoLeft < 175 && dinoBottom <= 50 && !alreadyJump) {
     alert(`Game Over! Seu score foi: ${placar}`);
@@ -60,9 +67,13 @@ setInterval(() => {
     alert(`Game Over! Seu score foi: ${placar}`);
     count = 0;
   }
-  if (pastelLeft > -20 && pastelLeft < 0 && dinoBottom > 50 && alreadyJump) {
-    placar.style.animation = "none";
-    count = 0;
+  if (pastelLeft > -50 && pastelLeft < -17 && dinoBottom > 50 && alreadyJump) {
+    pastel.style.animation = "none";
+    placar += 122;
+  }
+  if (comboLeft > -200 && comboLeft < 0 && dinoBottom > 50 && alreadyJump) {
+    combo.style.animation = "none";
+    placar += 122;
   }
   if (enemyEntulhoLeft > -200 && enemyEntulhoLeft < -130 && dinoBottom <= 50 && !alreadyJump) {
     alert(`Game Over! Seu score foi: ${placar}`);
