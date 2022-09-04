@@ -1,23 +1,38 @@
+// Player
 const max = document.querySelector(".max");
-const cacto = document.querySelector(".cacto");
-const catraca = document.querySelector(".catraca");
+
+// Dynamic screen items
 const score = document.querySelector(".score");
+const scoreCoins = document.querySelector(".scoreCoins");
 const moedas = document.querySelector(".moedas");
 const moedas2 = document.querySelector(".moedas2");
 const moedas3 = document.querySelector(".moedas3");
-const buraco = document.querySelector(".buraco");
+
+// Bonus
+const moneyBonus = document.querySelector(".moneyBonus");
+const coinBonus = document.querySelector(".coinBonus");
+const coinBonus11 = document.querySelector(".coinBonus11");
+const coinBonus12 = document.querySelector(".coinBonus12");
+const coinBonus13 = document.querySelector(".coinBonus13");
 const pastel = document.querySelector(".pastel");
 const combo = document.querySelector(".combo");
+
+// Enemies
+const cacto = document.querySelector(".cacto");
+const catraca = document.querySelector(".catraca");
+const worksBoard = document.querySelector(".worksBoard");
 const enemyEntulho = document.querySelector(".enemyEntulho");
 
 
 //audios
 const coin = new Audio("./fx/coin.wav");
 
-
+let check = "";
 let alreadyJump = false;
 let count = 0;
 let placar = 0;
+let i = 0;
+let coinsCount = 0;
 
 document.addEventListener("keydown", (e) => {
   if ((e.code === "ArrowUp") | (e.code === "Space")) {
@@ -38,21 +53,60 @@ function jump() {
 }
 
 setInterval(() => {
-  let pastelBottom = parseInt(
-    window.getComputedStyle(pastel).getPropertyValue("bottom")
-  );
-  let pastelLeft = parseInt(
-    window.getComputedStyle(pastel).getPropertyValue("left")
-  );
-  let comboBottom = parseInt(
-    window.getComputedStyle(combo).getPropertyValue("bottom")
-  );
-  let comboLeft = parseInt(
-    window.getComputedStyle(combo).getPropertyValue("left")
-  );
+
+  //Player
+
   let maxBottom = parseInt(
     window.getComputedStyle(max).getPropertyValue("bottom")
   );
+
+  //Coins
+
+  let coin1Position = parseInt(
+    window.getComputedStyle(moedas).getPropertyValue("left")
+  );
+
+  let coin2Position = parseInt(
+    window.getComputedStyle(moedas2).getPropertyValue("left")
+  );
+
+  let coin3Position = parseInt(
+    window.getComputedStyle(moedas3).getPropertyValue("left")
+  );
+
+  //Bonus
+
+  let pastelLeft = parseInt(
+    window.getComputedStyle(pastel).getPropertyValue("left")
+  );
+
+  let comboLeft = parseInt(
+    window.getComputedStyle(combo).getPropertyValue("left")
+  );
+
+  let moneyBonusLeft = parseInt(
+    window.getComputedStyle(moneyBonus).getPropertyValue("left")
+  );
+
+  let coinBonusLeft = parseInt(
+    window.getComputedStyle(coinBonus).getPropertyValue("left")
+  );
+
+  let coinBonusLeft11 = parseInt(
+    window.getComputedStyle(coinBonus11).getPropertyValue("left")
+  );
+
+  let coinBonusLeft12 = parseInt(
+    window.getComputedStyle(coinBonus12).getPropertyValue("left")
+  );
+
+  let coinBonusLeft13 = parseInt(
+    window.getComputedStyle(coinBonus13).getPropertyValue("left")
+  );
+
+
+  //Enemies
+
   let cactoLeft = parseInt(
     window.getComputedStyle(cacto).getPropertyValue("left")
   );
@@ -62,12 +116,12 @@ setInterval(() => {
   let enemyEntulhoLeft = parseInt(
     window.getComputedStyle(enemyEntulho).getPropertyValue("left")
   );
-  let buracoLeft = parseInt(
-    window.getComputedStyle(buraco).getPropertyValue("left")
+  let worksBoardLeft = parseInt(
+    window.getComputedStyle(worksBoard).getPropertyValue("left")
   );
 
-  console.log(comboLeft, pastelLeft, maxBottom);
 
+  console.log(coinBonusLeft12);
   // BONUS
   if (pastelLeft > -50 && pastelLeft < -17 && maxBottom > 50 && alreadyJump) {
     pastel.style.animation = "none";
@@ -79,75 +133,82 @@ setInterval(() => {
     coin.play();
     placar += 122;
   }
-
-
-
-  // ENEMYS
-
-  if (cactoLeft > 40 && cactoLeft < 175 && maxBottom <= 50 && !alreadyJump) {
-    if (moedas3.style.left == "130px") {
-
-      moedas3.style.left = 0;
-    }
-    if (moedas2.style.left == "80px" && moedas3.style.left != "130px") {
-      moedas2.style.left = 0;
-
-      count = 0;
-    }
-    if (moedas.style.left == "30px" && moedas2.style.left != "80px") {
-      moedas.style.left = 0;
-      alert(`Game Over! Seu score foi: ${placar}`);
-      count = 0;
-    }
+  if (moneyBonusLeft > 190 && moneyBonusLeft < 200 && maxBottom > 50 && alreadyJump) {
+    moneyBonus.style.animation = "none";
+    coin.play();
+    coinsCount += 25;
   }
-  if (catracaLeft > -200 && catracaLeft < -100 && maxBottom <= 50 && !alreadyJump) {
-    if (moedas3.style.left == "130px") {
-
-      moedas3.style.left = 0;
-    }
-    if (moedas2.style.left == "80px" && moedas3.style.left != "130px") {
-      moedas2.style.left = 0;
-
-      count = 0;
-    }
-    if (moedas.style.left == "30px" && moedas2.style.left != "80px") {
-      moedas.style.left = 0;
-      alert(`Game Over! Seu score foi: ${placar}`);
-      count = 0;
-    }
+  if (coinBonusLeft > 190 && coinBonusLeft < 200 && maxBottom > 50 && alreadyJump) {
+    moneyBonus.style.animation = "none";
+    coin.play();
+    coinsCount += 25;
   }
-  if (enemyEntulhoLeft > -200 && enemyEntulhoLeft < -130 && maxBottom <= 50 && !alreadyJump) {
-    if (moedas3.style.left == "130px") {
-
-      moedas3.style.left = 0;
-    }
-    if (moedas2.style.left == "80px" && moedas3.style.left != "130px") {
-      moedas2.style.left = 0;
-
-      count = 0;
-    }
-    if (moedas.style.left == "30px" && moedas2.style.left != "80px") {
-      moedas.style.left = 0;
-      alert(`Game Over! Seu score foi: ${placar}`);
-      count = 0;
-    }
+  if (coinBonusLeft11 > 190 && coinBonusLeft11 < 200 && maxBottom > 50 && alreadyJump) {
+    coinBonus11.style.animation = "none";
+    coin.play();
+    coinsCount += 25;
   }
-  if (buracoLeft > -200 && buracoLeft < 185 && maxBottom <= 50 && !alreadyJump) {
-    if (moedas3.style.left == "130px") {
-
-      moedas3.style.left = 0;
-    }
-    if (moedas2.style.left == "80px" && moedas3.style.left != "130px") {
-      moedas2.style.left = 0;
-
-      count = 0;
-    }
-    if (moedas.style.left == "30px" && moedas2.style.left != "80px") {
-      moedas.style.left = 0;
-      alert(`Game Over! Seu score foi: ${placar}`);
-      count = 0;
-    }
+  if (coinBonusLeft12 > 190 && coinBonusLeft12 < 200 && maxBottom > 50 && alreadyJump) {
+    coinBonus12.style.animation = "none";
+    coin.play();
+    coinsCount += 25;
   }
+  if (coinBonusLeft13 > 190 && coinBonusLeft13 < 200 && maxBottom > 50 && alreadyJump) {
+    coinBonus13.style.animation = "none";
+    coin.play();
+    coinsCount += 25;
+  }
+
+
+
+  // ENEMIES RULES
+
+  if (cactoLeft > 168 && cactoLeft < 175 && maxBottom <= 50 && !alreadyJump) {
+    moedas3.style.left = -50 + "px";
+    check = "cacto";
+  }
+
+  if (worksBoardLeft > 178 && worksBoardLeft < 185 && maxBottom <= 50 && !alreadyJump) {
+    if (coin3Position == 130) {
+      moedas3.style.left = -50 + "px";
+    }
+    if (coin2Position == 80 && coin3Position !== 130 && check == "cacto") {
+      moedas2.style.left = -50 + "px";
+    }
+    check = "worksBoard";
+  }
+
+  if (enemyEntulhoLeft > -150 && enemyEntulhoLeft < -130 && maxBottom <= 50 && !alreadyJump) {
+    if (coin3Position == 130) {
+      moedas3.style.left = -50 + "px";
+    }
+    if (coin2Position == 80 && coin3Position !== 130 && check == "cacto" || check == "worksBoard") {
+      moedas2.style.left = -50 + "px";
+      check = "enemyEntulho";
+    }
+    if (coin1Position == 30 && coin2Position !== 80 && coin3Position !== 130 && check == "cacto" || check == "worksBoard") {
+      moedas.style.left = -50 + "px";
+    }
+    check = "enemyEntulho";
+  }
+  if (catracaLeft > -130 && catracaLeft < -100 && maxBottom <= 50 && !alreadyJump) {
+    if (coin3Position == 130) {
+      moedas3.style.left = -50 + "px";
+    }
+    if (coin2Position == 80 && coin3Position !== 130) {
+      moedas2.style.left = -50 + "px";
+    }
+    if (coin1Position == 30 && coin2Position !== 80 && coin3Position !== 130) {
+      moedas.style.left = -50 + "px";
+    }
+    // if (coin2Position !== 80 && coin3Position !== 130 && coin1Position !== 30) {
+    //   alert(`Game Over! Seu score foi: ${placar}`);
+    //   count = 0;
+    // }
+  }
+
+
+
 
 
   // VICTORY
@@ -160,5 +221,6 @@ setInterval(() => {
   if (count - placar == 100) {
     placar += 25;
   }
+
   score.innerHTML = `SCORE: ${placar}`;
 }, 10);
