@@ -10,29 +10,43 @@ const moedas3 = document.querySelector(".moedas3");
 
 // Bonus
 const moneyBonus = document.querySelector(".moneyBonus");
+const facil = document.querySelector(".facil");
 const coinBonus = document.querySelector(".coinBonus");
 const coinBonus11 = document.querySelector(".coinBonus11");
 const coinBonus12 = document.querySelector(".coinBonus12");
 const coinBonus13 = document.querySelector(".coinBonus13");
 const pastel = document.querySelector(".pastel");
 const combo = document.querySelector(".combo");
+const combo2 = document.querySelector(".combo2");
+const combo3 = document.querySelector(".combo3");
 
 // Enemies
 const cacto = document.querySelector(".cacto");
 const catraca = document.querySelector(".catraca");
 const worksBoard = document.querySelector(".worksBoard");
 const enemyEntulho = document.querySelector(".enemyEntulho");
+const board = document.querySelector(".board");
+const poEnemy = document.querySelector(".poEnemy");
 
 
 //audios
 const coin = new Audio("./fx/coin.wav");
+const trilha = new Audio("./fx/trilha1.ogg");
+const damage = new Audio("./fx/damage.wav");
+
+
 
 let check = "";
 let alreadyJump = false;
 let count = 0;
 let placar = 0;
 let i = 0;
-let coinsCount = 0;
+let checkCacto = false;
+let checkWork = false;
+let checkTrash = false;
+let checkCatraca = false;
+
+let totalCoins = 100;
 
 document.addEventListener("keydown", (e) => {
   if ((e.code === "ArrowUp") | (e.code === "Space")) {
@@ -52,10 +66,14 @@ function jump() {
   }
 }
 
+
 setInterval(() => {
+  //Fx
+  damage.volume = 0.3;
 
   //Player
-
+  trilha.volume = 0.03;
+  trilha.play();
   let maxBottom = parseInt(
     window.getComputedStyle(max).getPropertyValue("bottom")
   );
@@ -83,6 +101,12 @@ setInterval(() => {
   let comboLeft = parseInt(
     window.getComputedStyle(combo).getPropertyValue("left")
   );
+  let combo2Left = parseInt(
+    window.getComputedStyle(combo2).getPropertyValue("left")
+  );
+  let combo3Left = parseInt(
+    window.getComputedStyle(combo3).getPropertyValue("left")
+  );
 
   let moneyBonusLeft = parseInt(
     window.getComputedStyle(moneyBonus).getPropertyValue("left")
@@ -90,6 +114,10 @@ setInterval(() => {
 
   let coinBonusLeft = parseInt(
     window.getComputedStyle(coinBonus).getPropertyValue("left")
+  );
+
+  let facilBonusLeft = parseInt(
+    window.getComputedStyle(facil).getPropertyValue("left")
   );
 
   let coinBonusLeft11 = parseInt(
@@ -119,100 +147,183 @@ setInterval(() => {
   let worksBoardLeft = parseInt(
     window.getComputedStyle(worksBoard).getPropertyValue("left")
   );
+  let boardLeft = parseInt(
+    window.getComputedStyle(board).getPropertyValue("left")
+  );
 
+  let poEnemyLeft = parseInt(
+    window.getComputedStyle(poEnemy).getPropertyValue("left")
+  );
+  ;
 
-  console.log(coinBonusLeft12);
   // BONUS
   if (pastelLeft > -50 && pastelLeft < -17 && maxBottom > 50 && alreadyJump) {
     pastel.style.animation = "none";
     coin.play();
     placar += 122;
   }
-  if (comboLeft > -200 && comboLeft < 0 && maxBottom > 50 && alreadyJump) {
+  if (comboLeft > 7 && comboLeft < 25 && maxBottom > 50 && alreadyJump) {
+    console.log("combo!!!!!!");
     combo.style.animation = "none";
     coin.play();
     placar += 122;
   }
-  if (moneyBonusLeft > 190 && moneyBonusLeft < 200 && maxBottom > 50 && alreadyJump) {
+  if (combo2Left > 222 && combo2Left < 230 && maxBottom > 50 && alreadyJump) {
+    console.log("combo!!22!!!!", combo2Left);
+    combo2.style.animation = "none";
+    coin.play();
+    placar += 122;
+  }
+  if (combo3Left > 120 && combo3Left < 130 && maxBottom > 50 && alreadyJump) {
+    console.log("combo!!333!!!!", combo3Left);
+    combo3.style.animation = "none";
+    coin.play();
+
+    placar += 122;
+  }
+  console.log("combo3Left", moneyBonusLeft);
+  if (moneyBonusLeft > 30 && moneyBonusLeft < 60 && maxBottom > 50 && alreadyJump) {
+    console.log("moneyBonus!!!!", moneyBonusLeft);
     moneyBonus.style.animation = "none";
+    console.log("moneyBonus!!!!");
     coin.play();
     coinsCount += 25;
   }
-  if (coinBonusLeft > 190 && coinBonusLeft < 200 && maxBottom > 50 && alreadyJump) {
-    moneyBonus.style.animation = "none";
+
+  // COINS
+
+  if (facilBonusLeft > 100 && facilBonusLeft < 300 && maxBottom > 50 && alreadyJump) {
+    facil.style.backgroundImage = "none";
     coin.play();
-    coinsCount += 25;
+  }
+  if (coinBonusLeft > 190 && coinBonusLeft < 200 && maxBottom > 50 && alreadyJump) {
+    coinBonus.style.backgroundImage = "none";
+    coin.play();
   }
   if (coinBonusLeft11 > 190 && coinBonusLeft11 < 200 && maxBottom > 50 && alreadyJump) {
     coinBonus11.style.animation = "none";
     coin.play();
-    coinsCount += 25;
   }
   if (coinBonusLeft12 > 190 && coinBonusLeft12 < 200 && maxBottom > 50 && alreadyJump) {
     coinBonus12.style.animation = "none";
     coin.play();
-    coinsCount += 25;
   }
   if (coinBonusLeft13 > 190 && coinBonusLeft13 < 200 && maxBottom > 50 && alreadyJump) {
     coinBonus13.style.animation = "none";
     coin.play();
-    coinsCount += 25;
   }
 
 
-
+  // console.log("poEnemyLeft", moneyBonus);
   // ENEMIES RULES
 
-  if (cactoLeft > 168 && cactoLeft < 175 && maxBottom <= 50 && !alreadyJump) {
-    moedas3.style.left = -50 + "px";
-    check = "cacto";
+  // if (cactoLeft > 168 && cactoLeft < 175 && maxBottom <= 50 && !alreadyJump) {
+  //   moedas3.style.backgroundImage = "none";
+  //   checkCacto = true;
+  // }
+  if (catracaLeft > -130 && catracaLeft < -100 && maxBottom <= 50 && !alreadyJump) {
+    moedas3.style.backgroundImage = "none";
+    damage.play();
+    // max.style.animation = "damage 0.25s linear 1 ";
+
+    checkCacto = true;
   }
 
   if (worksBoardLeft > 178 && worksBoardLeft < 185 && maxBottom <= 50 && !alreadyJump) {
-    if (coin3Position == 130) {
-      moedas3.style.left = -50 + "px";
+    if (moedas3.style.backgroundImage !== "none") {
+      moedas3.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkWork = true;
     }
-    if (coin2Position == 80 && coin3Position !== 130 && check == "cacto") {
-      moedas2.style.left = -50 + "px";
+    if (moedas2.style.backgroundImage !== "none" && moedas3.style.backgroundImage === "none" && checkCacto == true && checkWork == false) {
+      moedas2.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkWork = true;
     }
-    check = "worksBoard";
   }
 
   if (enemyEntulhoLeft > -150 && enemyEntulhoLeft < -130 && maxBottom <= 50 && !alreadyJump) {
-    if (coin3Position == 130) {
-      moedas3.style.left = -50 + "px";
+    if (moedas3.style.backgroundImage !== "none") {
+      moedas3.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkTrash = true;
     }
-    if (coin2Position == 80 && coin3Position !== 130 && check == "cacto" || check == "worksBoard") {
-      moedas2.style.left = -50 + "px";
-      check = "enemyEntulho";
+    if (moedas2.style.backgroundImage !== "none" && moedas3.style.backgroundImage === "none" && checkTrash == false) {
+      moedas2.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkTrash = true;
     }
-    if (coin1Position == 30 && coin2Position !== 80 && coin3Position !== 130 && check == "cacto" || check == "worksBoard") {
-      moedas.style.left = -50 + "px";
-    }
-    check = "enemyEntulho";
-  }
-  if (catracaLeft > -130 && catracaLeft < -100 && maxBottom <= 50 && !alreadyJump) {
-    if (coin3Position == 130) {
-      moedas3.style.left = -50 + "px";
-    }
-    if (coin2Position == 80 && coin3Position !== 130) {
-      moedas2.style.left = -50 + "px";
-    }
-    if (coin1Position == 30 && coin2Position !== 80 && coin3Position !== 130) {
-      moedas.style.left = -50 + "px";
-    }
-    // if (coin2Position !== 80 && coin3Position !== 130 && coin1Position !== 30) {
-    //   alert(`Game Over! Seu score foi: ${placar}`);
-    //   count = 0;
-    // }
-  }
+    console.log("worksBoardLeft", moedas.style.backgroundImage, moedas2.style.backgroundImage, moedas3.style.backgroundImage);
+    if (moedas.style.backgroundImage !== "none" && moedas3.style.backgroundImage === "none" && moedas2.style.backgroundImage === "none" && checkTrash == false) {
+      moedas.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkTrash = true;
 
+    }
+    if (moedas.style.backgroundImage === "none" && moedas3.style.backgroundImage === "none" && moedas2.style.backgroundImage === "none") {
+      trilha.pause();
+      alert(`Game Over! Seu score foi: ${placar}`);
+      count = 0;
+    }
+
+  }
+  if (worksBoardLeft > 178 && worksBoardLeft < 185 && maxBottom <= 50 && !alreadyJump) {
+    if (moedas3.style.backgroundImage !== "none") {
+      moedas3.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkWork = true;
+    }
+    if (moedas2.style.backgroundImage !== "none" && moedas3.style.backgroundImage === "none" && checkCacto == true && checkWork == false) {
+      moedas2.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkWork = true;
+    }
+  }
+  if (boardLeft > 75 && boardLeft < 100 && maxBottom <= 50 && !alreadyJump) {
+    damage.play();
+    if (moedas3.style.backgroundImage !== "none") {
+      moedas3.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkWork = true;
+    }
+    if (moedas2.style.backgroundImage !== "none" && moedas3.style.backgroundImage === "none" && checkCacto == true && checkWork == false) {
+      moedas2.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkWork = true;
+    }
+  }
+  if (poEnemyLeft > 230 && poEnemyLeft < 250 && maxBottom <= 50 && !alreadyJump) {
+    damage.play();
+    console.log("done", poEnemyLeft);
+    if (moedas3.style.backgroundImage !== "none") {
+      moedas3.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkWork = true;
+    }
+    if (moedas2.style.backgroundImage !== "none" && moedas3.style.backgroundImage === "none" && checkCacto == true && checkWork == false) {
+      moedas2.style.backgroundImage = "none";
+      damage.play();
+      // max.style.animation = "damage 0.25s linear 1 ";
+      checkWork = true;
+    }
+  }
 
 
 
 
   // VICTORY
-  if (count > 11800) {
+  if (count == 14800) {
+    trilha.pause();
     alert(`VOTE 50100!`);
     count = 0;
   }
