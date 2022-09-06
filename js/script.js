@@ -97,8 +97,6 @@ setInterval(() => {
     trilha.playbackRate = 1.3;
   }
 
-  console.log(scoreBoardCoins, miniCoins)
-
   //Coin exibition rules
 
   // if (scoreBoardCoins < 3 && miniCoins >= 5) {
