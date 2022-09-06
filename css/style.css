@@ -8,35 +8,44 @@
   width: 100vw ;
   height: 100vh;
   border: 1px solid #333;
-  position: relative;
+  position: fixed;
   overflow: hidden;
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-size: auto;
-
 }
 .game-board {
   width: 1024px;
   height: 500px;
   border: 1px solid #333;
   border-bottom: 12px solid #4E3B31;
-  margin: 100px auto;
+  top: 100px;
+  left: 200px;
   position: relative;
   overflow: hidden;
   background: linear-gradient(#87CEEB, #E0F6FF);
+}
 
+.scoreDiv {
+  width: 200px;
+  height: 60px;
+  position: relative;
+  background: linear-gradient( #E0F6FF, #87CEEB);
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .score {
-  position: absolute;
-  top: 80px;
-  left: 30px;
-  margin-left: 200px;
-  margin-top: 595px;
-  font-size: xx-large !important;
+  position: relative;
+  margin-left: 25%;
+  margin-top: -10px;
+  font-size: large !important;
   font-weight: bold;
-  color: #f9da41;
+  color: #4E3B31;
 }
+
 
 .money {
   position: absolute;
@@ -51,45 +60,73 @@
   animation: catraca 6.5s linear 1 10s;
 }
 
+.coinDiv {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  background: linear-gradient( #E0F6FF, #87CEEB);
+  top: 5px;
+  left: 810px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
 
 
 .moedas {
-  position: absolute;
+  position: relative;
   background-image: url(../images/moeda.png);
   width: 40px;
-  background-size: 40px;
+  background-size: 35px;
   height: 70px;
   background-repeat: no-repeat;
-  top: 20px;
-  left: 30px;
-  margin-left: 400px;
-  margin-top: 595px;
+  top: 20%;
+  left: 15%;
 }
 
 .moedas2 {
   position: absolute;
   background-image: url(../images/moeda.png);
   width: 40px;
-  background-size: 40px;
+  background-size: 35px;
   height: 70px;
   background-repeat: no-repeat;
-  top: 20px;
-  left: 80px;
-  margin-left: 410px;
-  margin-top: 595px;
+  top: 20%;
+  left: 40%;
+
 }
 
 .moedas3 {
   position: absolute;
   background-image: url(../images/moeda.png);
   width: 40px;
-  background-size: 40px;
+  background-size: 35px;
   height: 70px;
   background-repeat: no-repeat;
-  top: 20px;
-  left: 130px;
-  margin-left: 420px;
-  margin-top: 595px;
+  top: 20%;
+  left: 65%;
+}
+
+.moedas4 {
+  position: absolute;
+  background-image: url(../images/moeda.png);
+  width: 40px;
+  background-size: 30px;
+  height: 70px;
+  background-repeat: no-repeat;
+  top: 25%;
+  left: 65%;
+}
+
+.moedas5 {
+  position: absolute;
+  background-image: url(../images/moeda.png);
+  width: 40px;
+  background-size: 30px;
+  height: 70px;
+  background-repeat: no-repeat;
+  top: 25%;
+  left: 85%;
 }
 
 /* Player */
@@ -444,7 +481,7 @@
   rotate: 15deg;
   animation: coinBonus 6.5s linear 1 22.2s;
 }
- 
+
 .moneyBonus2 {
   position: absolute;
   bottom: 190px;
@@ -589,7 +626,7 @@
   position: absolute;
   width: 200px;
   bottom: -1px;
-  right: -240px;  
+  right: -240px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: arvore1-animation 8s 1 linear 95.5s;
@@ -599,7 +636,7 @@
   position: absolute;
   width: 120px;
   bottom: -1px;
-  right: -200px;  
+  right: -200px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: arvore1-animation 17s 1 linear 50.6s;
@@ -609,7 +646,7 @@
   position: absolute;
   width: 125px;
   bottom: -1px;
-  right: -300px;  
+  right: -300px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: arvore4-animation 11s 1 linear 102s;
@@ -619,7 +656,7 @@
   position: absolute;
   width: 150px;
   bottom: -1px;
-  right: -200px;  
+  right: -200px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   /* animation: arvore5-animation 11.5s 1 linear 12.6s; */
@@ -630,7 +667,7 @@
   position: absolute;
   width: 100px;
   bottom: -1px;
-  right: -200px;  
+  right: -200px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: arvore6-animation 13s 2 linear 64s;
@@ -640,7 +677,7 @@
   position: absolute;
   width: 195px;
   bottom: -1px;
-  right: -200px;  
+  right: -200px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: arvore5-animation 13s 1 linear 102.3s;
@@ -650,7 +687,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 10s  linear -3.5s;
@@ -662,7 +699,7 @@
   position: absolute;
   width: 135px;
   bottom: -4px;
-  right: -136px;  
+  right: -136px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -2.9s;
@@ -672,7 +709,7 @@
   position: absolute;
   width: 80px;
   bottom: -4px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -4.3s;
@@ -682,7 +719,7 @@
   position: absolute;
   width: 110px;
   bottom: -4px;
-  right: -112px;  
+  right: -112px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -5s;
@@ -692,7 +729,7 @@
   position: absolute;
   width: 60px;
   bottom: -1px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -3.9s;
@@ -702,7 +739,7 @@
   position: absolute;
   width: 135px;
   bottom: -4px;
-  right: -136px;  
+  right: -136px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -6.7s;
@@ -712,7 +749,7 @@
   position: absolute;
   width: 80px;
   bottom: -4px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -8.3s;
@@ -722,7 +759,7 @@
   position: absolute;
   width: 110px;
   bottom: -4px;
-  right: -112px;  
+  right: -112px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -11s;
@@ -732,7 +769,7 @@
   position: absolute;
   width: 130px;
   bottom: -4px;
-  right: -132px;  
+  right: -132px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -11.4s;
@@ -744,7 +781,7 @@
   position: absolute;
   width: 135px;
   bottom: -4px;
-  right: -136px;  
+  right: -136px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -9.7s;
@@ -754,7 +791,7 @@
   position: absolute;
   width: 60px;
   bottom: -1px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear -7.9s;
@@ -764,7 +801,7 @@
   position: absolute;
   width: 360px;
   bottom: -130px;
-  right: -361px;  
+  right: -361px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(21deg) rotateY(-4deg);
   animation: casa1-animation 16.7s 1 linear 1.9s;
@@ -774,7 +811,7 @@
  position: absolute;
   width: 120px;
   bottom: -35px;
-  right: -125px;  
+  right: -125px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(5deg) rotateY(-6deg);
   animation: conic-animation 16.7s 1 linear 0.1s;
@@ -786,7 +823,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 9s 1 linear 4.5s;
@@ -796,7 +833,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 9s 1 linear 3s;
@@ -806,7 +843,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 10.3s 1 linear 18s;
@@ -816,7 +853,7 @@
   position: absolute;
   width: 600px;
   bottom: -242px;
-  right: -601px;  
+  right: -601px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 5.3s 1 linear 20.9s;
@@ -826,7 +863,7 @@
   position: absolute;
   width: 390px;
   bottom: -60px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: shop-animation 22.1s 1 linear 10.3s;
@@ -836,7 +873,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 10.5s 1 linear 20s;
@@ -846,7 +883,7 @@
   position: absolute;
   width: 320px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 12s 1 linear 28.3s;
@@ -856,7 +893,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 12s 1 linear 30.4s;
@@ -866,7 +903,7 @@
   position: absolute;
   width: 300px;
   bottom: -5px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 12s 1 linear 32.5s;
@@ -876,7 +913,7 @@
   position: absolute;
   width: 110px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 11s 1 linear 33.9s;
@@ -886,7 +923,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 12s 1 linear 41.9s;
@@ -895,7 +932,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -370px;  
+  right: -370px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 12s 1 linear 43.9s;
@@ -904,7 +941,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -370px;  
+  right: -370px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 12s 1 linear 46.5s;
@@ -913,7 +950,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -352px;  
+  right: -352px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 12s 1 linear 48.5s;
@@ -923,7 +960,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 60s;
@@ -932,7 +969,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 62.4s;
@@ -941,7 +978,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 64s;
@@ -950,7 +987,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 67s;
@@ -959,7 +996,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 79s;
@@ -968,7 +1005,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 81.8s;
@@ -977,7 +1014,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 84s;
@@ -987,7 +1024,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 86.2s;
@@ -997,7 +1034,7 @@
   position: absolute;
   width: 350px;
   bottom: -1px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 89s;
@@ -1007,7 +1044,7 @@
   position: absolute;
   width: 240px;
   bottom: -314px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(9.5cm) rotateX(10deg) rotateY(6deg);
    animation: towels-animation 10s 1 linear 7.6s;
@@ -1018,7 +1055,7 @@
   position: absolute;
   width: 300px;
   bottom: -40px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(5deg) rotateY(6deg);
   animation: casa1-animation 12s 1 linear 24.7s;
@@ -1098,7 +1135,7 @@
   position: absolute;
   width: 650px;
   bottom: -30px;
-  right: -800px;  
+  right: -800px;
   transform-style: preserve-3d;
   transform: perspective(9.5cm) rotateX(8deg) rotateY(-4deg);
   animation: cantador-animation 10.5s 1 linear 12s;
@@ -1108,7 +1145,7 @@
   position: absolute;
   width: 750px;
   bottom: -55px;
-  right: -760px;  
+  right: -760px;
   transform-style: preserve-3d;
   transform: perspective(9.5cm) rotateX(8deg) rotateY(-4deg);
   animation: cantador-animation 12s 1 linear 38s;
@@ -1118,7 +1155,7 @@
   position: absolute;
   width: 200px;
   bottom: -60px;
-  right: -2800px;  
+  right: -2800px;
   transform-style: preserve-3d;
   transform: perspective(9.5cm) rotateX(8deg) rotateY(-4deg);
   animation: cantador-animation 12s 1 linear 39.4s;
@@ -1128,7 +1165,7 @@
   position: absolute;
   width: 750px;
   bottom: -55px;
-  right: -2800px;  
+  right: -2800px;
   transform-style: preserve-3d;
   transform: perspective(9.5cm) rotateX(8deg) rotateY(-4deg);
   animation: cantador-animation 12s 1 linear 38s;
@@ -1138,7 +1175,7 @@
   position: absolute;
   width: 180px;
   bottom: -1px;
-  right: -200px;  
+  right: -200px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: caixaDagua-animation 14.5s 2 linear -3s;
@@ -1148,7 +1185,7 @@
   position: absolute;
   width: 105px;
   bottom: -1px;
-  right: -145px;  
+  right: -145px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: caixaDagua-animation 15.1s 1 linear -4.6s;
@@ -1158,7 +1195,7 @@
   position: absolute;
   width: 280px;
   bottom: -40px;
-  right: -290px;  
+  right: -290px;
   transform-style: preserve-3d;
   transform: perspective(50cm) rotateX(-10deg) rotateY(1deg);
   animation: casa1-animation 8.2s 1 linear 56.6s;
@@ -1168,7 +1205,7 @@
   position: absolute;
   width: 300px;
   bottom: -390px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(10deg) rotateY(6deg);
   animation: casa1-animation 15.1s 1 linear 55.6s;
@@ -1178,7 +1215,7 @@
   position: absolute;
   width: 400px;
   bottom: -1px;
-  right: -450px;  
+  right: -450px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: pracaRelogio-animation 15.5s 1 linear 53.1s;
@@ -1226,7 +1263,7 @@
   position: absolute;
   width: 140px;
   bottom: -1px;
-  right: -200px;  
+  right: -200px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: towels-animation 10s 1 linear 88.7s;
@@ -1248,7 +1285,7 @@
   position: absolute;
   width: 135px;
   bottom: -4px;
-  right: -136px;  
+  right: -136px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear 75.7s;
@@ -1258,7 +1295,7 @@
   position: absolute;
   width: 80px;
   bottom: -4px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear 74.2s;
@@ -1268,7 +1305,7 @@
   position: absolute;
   width: 110px;
   bottom: -4px;
-  right: -112px;  
+  right: -112px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear 73.6s;
@@ -1278,7 +1315,7 @@
   position: absolute;
   width: 60px;
   bottom: -1px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear 74.7s;
@@ -1288,7 +1325,7 @@
   position: absolute;
   width: 135px;
   bottom: -4px;
-  right: -136px;  
+  right: -136px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear 71.9s;
@@ -1298,7 +1335,7 @@
   position: absolute;
   width: 80px;
   bottom: -4px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear 69.3s;
@@ -1308,7 +1345,7 @@
   position: absolute;
   width: 110px;
   bottom: -4px;
-  right: -112px;  
+  right: -112px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear 67.4s;
@@ -1318,7 +1355,7 @@
   position: absolute;
   width: 130px;
   bottom: -4px;
-  right: -132px;  
+  right: -132px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 16.7s 1 linear 67s;
@@ -1329,7 +1366,7 @@
   position: absolute;
   width: 160px;
   bottom: -15px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 14s 1 linear 72s;
@@ -1339,7 +1376,7 @@
   position: absolute;
   width: 190px;
   bottom: -15px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 12.6s 1 linear 74s;
@@ -1349,7 +1386,7 @@
   position: absolute;
   width: 520px;
   bottom: -175px;
-  right: -730px;  
+  right: -730px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 10s 1 linear 78s;
@@ -1359,7 +1396,7 @@
   position: absolute;
   width: 300px;
   bottom: -390px;
-  right: -440px;  
+  right: -440px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(10deg) rotateY(6deg);
   /* animation: casa1-animation 12.1s 1 linear 75s; */
@@ -1370,7 +1407,7 @@
   position: absolute;
   width: 590px;
   bottom: -15px;
-  right: -592px;  
+  right: -592px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(23deg) rotateY(-10deg);
   animation: casa1-animation 12.4s 1 linear 96s;
@@ -1380,7 +1417,7 @@
   position: absolute;
   width: 135px;
   bottom: -4px;
-  right: -138px;  
+  right: -138px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.5s 1 linear 90.5s;
@@ -1390,7 +1427,7 @@
   position: absolute;
   width: 80px;
   bottom: -4px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.5s 1 linear 90.9s;
@@ -1400,7 +1437,7 @@
   position: absolute;
   width: 110px;
   bottom: -4px;
-  right: -112px;  
+  right: -112px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.5s 1 linear 91.5s;
@@ -1410,7 +1447,7 @@
   position: absolute;
   width: 215px;
   bottom: -1px;
-  right: -301px;  
+  right: -301px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.8s 1 linear 93.8s;
@@ -1420,7 +1457,7 @@
   position: absolute;
   width: 200px;
   bottom: -4px;
-  right: -231px;  
+  right: -231px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.8s 1 linear 98.3s;
@@ -1430,7 +1467,7 @@
   position: absolute;
   width:240px;
   bottom: -1px;
-  right: -341px;  
+  right: -341px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.8s 1 linear 100s;
@@ -1440,7 +1477,7 @@
   position: absolute;
   width: 135px;
   bottom: -4px;
-  right: -138px;  
+  right: -138px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13s 1 linear 97.2s;
@@ -1450,7 +1487,7 @@
   position: absolute;
   width: 80px;
   bottom: -4px;
-  right: -85px;  
+  right: -85px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.8s 1 linear 99.5s;
@@ -1460,7 +1497,7 @@
   position: absolute;
   width: 110px;
   bottom: -4px;
-  right: -112px;  
+  right: -112px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.8s 1 linear 100.5s;
@@ -1542,7 +1579,7 @@
   position: absolute;
   width: 400px;
   bottom: -1px;
-  right: -400px;  
+  right: -400px;
   transform-style: preserve-3d;
   transform: perspective(5.5cm) rotateX(15deg) rotateY(-6deg);
   animation: catedral-animation 10s 1 linear 116.5s;
@@ -1553,7 +1590,7 @@
   position: absolute;
   width: 400px;
   bottom: -1px;
-  right: -400px;  
+  right: -400px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: conic-animation 10s 1 linear 128s;
@@ -1577,7 +1614,7 @@
   position: absolute;
   width: 700px;
   bottom: -187px;
-  right: -701px;  
+  right: -701px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: conic-animation 18s 1 linear 150s;
@@ -1587,7 +1624,7 @@
   position: absolute;
   width: 850px;
   bottom: -38px;
-  right: -850px;  
+  right: -850px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: ponteJk-animation 12s 1 linear 110s;
@@ -1605,16 +1642,16 @@
   animation: casa1-animation 12.3s linear 1 109.5s;
 }
 
-.park {
+.parkVerde {
   position: absolute;
   bottom: -103px;
-  background-image: url(../images/park.png);
+  background-image: url(../images/parkVerde.png);
   width: 300px;
   height: 300px;
   right: 1200px;
   background-size: 300px;
   background-repeat: no-repeat;
-  animation: casa1-animation 16s linear 1 115s;
+  animation: casa1-animation 16s linear 1 112s;
 }
 
 
@@ -1622,7 +1659,7 @@
   position: absolute;
   width: 150px;
   bottom: -1px;
-  right: -300px;  
+  right: -300px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: arvore-animation 9s 3 linear 99s;
@@ -1635,7 +1672,7 @@
   position: absolute;
   width: 600px;
   bottom: -242px;
-  right: 1223px;  
+  right: 1223px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: entulho-animation 3.2s 1 linear 3s;
@@ -1649,7 +1686,7 @@
   position: absolute;
   width: 150px;
   bottom: -25px;
-  right: 1550px;  
+  right: 1550px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: ibaneis-animation 7.6s 1 linear -2s;
@@ -1659,7 +1696,7 @@
   position: absolute;
   width: 150px;
   bottom: -35px;
-  right: -151px;  
+  right: -151px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: ibaneis-animation 10s 1 linear 50s;
@@ -1669,7 +1706,7 @@
   position: absolute;
   width: 190px;
   bottom: -15px;
-  right: -191px;  
+  right: -191px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: ibaneis-animation 10s 1 linear 55s;
@@ -1679,7 +1716,7 @@
   position: absolute;
   width: 150px;
   bottom: -35px;
-  right: -151px;  
+  right: -151px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: ibaneis-animation 10s 1 linear 57s;
@@ -1689,7 +1726,7 @@
   position: absolute;
   width: 250px;
   bottom: -50px;
-  right: -252px;   
+  right: -252px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 3.8s 3 linear alternate 0.1s;
@@ -1700,7 +1737,7 @@
   position: absolute;
   width: 120px;
   bottom: -25px;
-  right: -122px;  
+  right: -122px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 5s 1 linear 18.2s;
@@ -1710,7 +1747,7 @@
   position: absolute;
   width: 120px;
   bottom: -25px;
-  right: -122px;  
+  right: -122px;
   transform-style: preserve-3d;
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 5s 1 linear 23.8s;
@@ -1720,7 +1757,7 @@
   position: absolute;
   width: 120px;
   bottom: -1px;
-  right: -145px;  
+  right: -145px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 8.7s 1 linear 14s;
@@ -1729,7 +1766,7 @@
  position: absolute;
   width: 90px;
   bottom: -1px;
-  right: -145px;  
+  right: -145px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 8.3s 1 linear 14.4s;
@@ -1739,7 +1776,7 @@
   position: absolute;
   width: 130px;
   bottom: -1px;
-  right: -145px;  
+  right: -145px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 8s 1 linear 14.7s;
@@ -1748,7 +1785,7 @@
  position: absolute;
   width: 138px;
   bottom: -1px;
-  right: -145px;  
+  right: -145px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 7.5s 1 linear 15s;
@@ -1757,7 +1794,7 @@
   position: absolute;
   width: 75px;
   bottom: -1px;
-  right: -145px;  
+  right: -145px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 7.2s 1 linear 15.3s;
@@ -1766,7 +1803,7 @@
  position: absolute;
   width: 105px;
   bottom: -1px;
-  right: -145px;  
+  right: -145px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
   animation: octavio-animation 6.6s 1 linear 15.9s;
@@ -1807,11 +1844,11 @@
   20% {
     bottom: 160px;
   }
- 
+
   30% {
     bottom: 200px;
   }
-  
+
   40% {
     bottom: 230px;
   }
@@ -1823,8 +1860,8 @@
   65% {
     bottom: 250px;
   }
-  
-  
+
+
   75% {
     bottom: 200px;
   }
@@ -1832,11 +1869,11 @@
   83% {
     bottom: 190px;
   }
-  
+
   90% {
     bottom: 175px;
   }
-  
+
   95% {
     bottom: 160px;
   }
