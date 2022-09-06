@@ -79,7 +79,7 @@ function jump() {
     setTimeout(() => {
       max.classList.remove("jump");
       alreadyJump = false;
-    }, 1000);
+    }, 700);
   }
 }
 
@@ -93,8 +93,13 @@ setInterval(() => {
   trilha.volume = 0.03;
   trilha.play();
 
-  if (scoreBoardCoins == 2) {
+  if (scoreBoardCoins == 1) {
     trilha.playbackRate = 1.3;
+  }
+  if (scoreBoardCoins <= 0) {
+    trilha.pause();
+    alert(`Ahhh... Que pena, você perdeu.\nTente ajudar o MAX MACIEL 50100 Novamente!!\nSua pontuação foi de ${placar} pontos`);
+    count = 0;
   }
 
   //Coin exibition rules
@@ -206,28 +211,23 @@ setInterval(() => {
     placar += 122;
   }
   if (comboLeft > 7 && comboLeft < 25 && maxBottom > 50 && alreadyJump) {
-    console.log("combo!!!!!!");
     combo.style.animation = "none";
     coin.play();
     placar += 122;
   }
   if (combo2Left > 222 && combo2Left < 230 && maxBottom > 50 && alreadyJump) {
-    console.log("combo!!22!!!!", combo2Left);
     combo2.style.animation = "none";
     coin.play();
     placar += 122;
   }
   if (combo3Left > 120 && combo3Left < 130 && maxBottom > 50 && alreadyJump) {
-    console.log("combo!!333!!!!", combo3Left);
     combo3.style.animation = "none";
     coin.play();
 
     placar += 122;
   }
   if (moneyBonusLeft > 30 && moneyBonusLeft < 60 && maxBottom > 50 && alreadyJump) {
-    console.log("moneyBonus!!!!", moneyBonusLeft);
     moneyBonus.style.animation = "none";
-    console.log("moneyBonus!!!!");
     coin.play();
     coinsCount += 25;
   }
@@ -316,5 +316,5 @@ setInterval(() => {
     placar += 25;
   }
 
-  score.innerHTML = `SCORE: ${placar}`;
+  score.innerHTML = `${placar}`;
 }, 10);
