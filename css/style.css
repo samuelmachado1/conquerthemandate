@@ -361,8 +361,314 @@
   background-repeat: no-repeat;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
-  animation: cacto 4.3s linear 1  45s;
+  animation: cacto 4.3s linear 1  58s;
 }
+
+/* Recanto */
+.catracaRecanto{
+  position: absolute;
+  bottom: -190px;
+  background-image: url(../images/catraca.png);
+  width: 580px;
+  height: 580px;
+  right: 1200px;
+  background-size: 580px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1  63s;
+}
+
+.enemyEntulhoRecanto{
+  position: absolute;
+  bottom: -240px;
+  background-image: url(../images/restoObras.png);
+  width: 600px;
+  height: 600px;
+  right: 1200px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1 68s;
+}
+
+.worksBoardRecanto{
+  position: absolute;
+  bottom: -38px;
+  background-image: url(../images/em-Obras.png);
+  width: 120px;
+  height: 120px;
+  right: 1200px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
+  animation: cacto 4.3s linear 1  71s;
+}
+.catracaRecanto2{
+  position: absolute;
+  bottom: -190px;
+  background-image: url(../images/catraca.png);
+  width: 580px;
+  height: 580px;
+  right: 1200px;
+  background-size: 580px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1  75s;
+}
+
+.enemyEntulhoRecanto2{
+  position: absolute;
+  bottom: -240px;
+  background-image: url(../images/restoObras.png);
+  width: 600px;
+  height: 600px;
+  right: 1200px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1 78s;
+}
+
+.worksBoardRecanto2{
+  position: absolute;
+  bottom: -38px;
+  background-image: url(../images/em-Obras.png);
+  width: 120px;
+  height: 120px;
+  right: 1200px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
+  animation: cacto 4.3s linear 1  84s;
+}
+
+/* SaoSebas */
+.catracaSaoSebas{
+  position: absolute;
+  bottom: -190px;
+  background-image: url(../images/catraca.png);
+  width: 580px;
+  height: 580px;
+  right: 1200px;
+  background-size: 580px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1  86.5s;
+}
+
+.enemyEntulhoSaoSebas{
+  position: absolute;
+  bottom: -240px;
+  background-image: url(../images/restoObras.png);
+  width: 600px;
+  height: 600px;
+  right: 1200px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1 90s;
+}
+
+.worksBoardSaoSebas{
+  position: absolute;
+  bottom: -38px;
+  background-image: url(../images/em-Obras.png);
+  width: 120px;
+  height: 120px;
+  right: 1200px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
+  animation: cacto 4.3s linear 1  95s;
+}
+.catracaSaoSebas2{
+  position: absolute;
+  bottom: -190px;
+  background-image: url(../images/catraca.png);
+  width: 580px;
+  height: 580px;
+  right: 1200px;
+  background-size: 580px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1  99s;
+}
+
+.enemyEntulhoSaoSebas2{
+  position: absolute;
+  bottom: -240px;
+  background-image: url(../images/restoObras.png);
+  width: 600px;
+  height: 600px;
+  right: 1200px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1 103s;
+}
+
+.worksBoardSaoSebas2{
+  position: absolute;
+  bottom: -38px;
+  background-image: url(../images/em-Obras.png);
+  width: 120px;
+  height: 120px;
+  right: 1200px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
+  animation: cacto 4.3s linear 1  106s;
+}
+
+/* Lago */
+.catracaLago{
+  position: absolute;
+  bottom: -190px;
+  background-image: url(../images/catraca.png);
+  width: 580px;
+  height: 580px;
+  right: 1200px;
+  background-size: 580px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1  110s;
+}
+
+.enemyEntulhoLago{
+  position: absolute;
+  bottom: -240px;
+  background-image: url(../images/restoObras.png);
+  width: 600px;
+  height: 600px;
+  right: 1200px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1 112s;
+}
+
+.worksBoardLago{
+  position: absolute;
+  bottom: -38px;
+  background-image: url(../images/em-Obras.png);
+  width: 120px;
+  height: 120px;
+  right: 1200px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
+  animation: cacto 4.3s linear 1  115s;
+}
+.catracaLago2{
+  position: absolute;
+  bottom: -190px;
+  background-image: url(../images/catraca.png);
+  width: 580px;
+  height: 580px;
+  right: 1200px;
+  background-size: 580px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1  118s;
+}
+
+.enemyEntulhoLago2{
+  position: absolute;
+  bottom: -240px;
+  background-image: url(../images/restoObras.png);
+  width: 600px;
+  height: 600px;
+  right: 1200px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1 122s;
+}
+
+.worksBoardLago2{
+  position: absolute;
+  bottom: -38px;
+  background-image: url(../images/em-Obras.png);
+  width: 120px;
+  height: 120px;
+  right: 1200px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
+  animation: cacto 4.3s linear 1  125s;
+}
+
+/* Plano */
+.catracaPlano{
+  position: absolute;
+  bottom: -190px;
+  background-image: url(../images/catraca.png);
+  width: 580px;
+  height: 580px;
+  right: 1200px;
+  background-size: 580px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1  128s;
+}
+
+.enemyEntulhoPlano{
+  position: absolute;
+  bottom: -240px;
+  background-image: url(../images/restoObras.png);
+  width: 600px;
+  height: 600px;
+  right: 1200px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1 132s;
+}
+
+.worksBoardPlano{
+  position: absolute;
+  bottom: -38px;
+  background-image: url(../images/em-Obras.png);
+  width: 120px;
+  height: 120px;
+  right: 1200px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
+  animation: cacto 4.3s linear 1  135s;
+}
+.catracaPlano2{
+  position: absolute;
+  bottom: -190px;
+  background-image: url(../images/catraca.png);
+  width: 580px;
+  height: 580px;
+  right: 1200px;
+  background-size: 580px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1  137s;
+}
+
+.enemyEntulhoPlano2{
+  position: absolute;
+  bottom: -240px;
+  background-image: url(../images/restoObras.png);
+  width: 600px;
+  height: 600px;
+  right: 1200px;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  animation: catraca 4s linear 1 140s;
+}
+
+.worksBoardPlano2{
+  position: absolute;
+  bottom: -38px;
+  background-image: url(../images/em-Obras.png);
+  width: 120px;
+  height: 120px;
+  right: 1200px;
+  background-size: 120px;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+  transform: perspective(10cm) rotateX(38deg) rotateY(-15deg);
+  animation: cacto 4.3s linear 1  143s;
+}
+
+
 /* Bonus */
 
 .pastel {
