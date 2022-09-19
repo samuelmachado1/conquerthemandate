@@ -70,26 +70,36 @@ const foodBonus = new Audio("./fx/foodBonus.wav");
 let checkCacto = false;
 let checkWork = false;
 let checkTrash = false;
-let checkCatraca = false;
 let checkBoard = false;
 let checkPoEnemy = false;
+
+let checkCatraca = false;
+let checkCatracaTagua = false;
+let checkCatracaTagua2 = false;
+let checkCatracaRecanto = false;
+let checkCatracaRecanto2 = false;
+let checkCatracaSaoSebas = false;
+let checkCatracaSaoSebas2 = false;
+
+
 
 let checkCactoTagua = false;
 let checkWorkTagua = false;
 let checkTrashTagua = false;
-let checkCatracaTagua = false;
 let checkBoardTagua = false;
+
+let checkWorkTagua2 = false;
+let checkTrashTagua2 = false;
+let checkBoardTagua2 = false;
 
 let checkCactoRecanto = false;
 let checkWorkRecanto = false;
 let checkTrashRecanto = false;
-let checkCatracaRecanto = false;
 let checkBoardRecanto = false;
 
 let checkCactoSaoSebas = false;
 let checkWorkSaoSebas = false;
 let checkTrashSaoSebas = false;
-let checkCatracaSaoSebas = false;
 let checkBoardSaoSebas = false;
 
 // Helper for jump
@@ -97,7 +107,7 @@ let alreadyJump = false;
 
 
 // Counters
-let scoreBoardCoins = 3;
+let scoreBoardCoins = 4;
 let miniCoins = 0;
 
 
@@ -141,27 +151,27 @@ setInterval(() => {
   trilha.volume = 0.25;
   trilha.play();
 
-  if (scoreBoardCoins == 1) {
+  if (scoreBoardCoins <= 1) {
     trilha.playbackRate = 1.3;
   }
-  // if (scoreBoardCoins <= 0) {
-  //   trilha.pause();
-  //   alert(`Ahhh... Que pena, você perdeu.\nTente ajudar o MAX MACIEL 50100 Novamente!!\nSua pontuação foi de ${placar} pontos`);
-  //   count = 0;
-  // }
+  if (scoreBoardCoins <= 0) {
+    trilha.pause();
+    alert(`Ahhh... Que pena, você perdeu.\nTente ajudar o MAX MACIEL 50100 Novamente!!\nSua pontuação foi de ${placar} pontos`);
+    count = 0;
+  }
 
   // Coin bonus rules
 
-  if (miniCoins >= 2 && scoreBoardCoins < 3) {
-    scoreBoardCoins += 1;
-  }
+  // if (miniCoins >= 2 && scoreBoardCoins < 3) {
+  //   scoreBoardCoins += 1;
+  // }
 
-  if (scoreBoardCoins == 3) {
+  if (scoreBoardCoins >= 3) {
     moedas.style.backgroundImage = "30px";
     moedas2.style.backgroundImage = "80px";
     moedas3.style.backgroundImage = "130px";
   }
-  if (scoreBoardCoins == 2) {
+  if (scoreBoardCoins <= 2) {
     moedas.style.backgroundImage = "30px";
     moedas2.style.backgroundImage = "80px";
     moedas3.style.backgroundImage = "none";
@@ -233,6 +243,24 @@ setInterval(() => {
 
   let catracaLeft = parseInt(
     window.getComputedStyle(catraca).getPropertyValue("left")
+  );
+  let catracaLeftTagua = parseInt(
+    window.getComputedStyle(catracaTagua).getPropertyValue("left")
+  );
+  let catracaLeftTagua2 = parseInt(
+    window.getComputedStyle(catracaTagua2).getPropertyValue("left")
+  );
+  let catracaLeftRecanto = parseInt(
+    window.getComputedStyle(catracaRecanto).getPropertyValue("left")
+  );
+  let catracaLeftRecanto2 = parseInt(
+    window.getComputedStyle(catracaRecanto2).getPropertyValue("left")
+  );
+  let catracaLeftSaoSebas = parseInt(
+    window.getComputedStyle(catracaSaoSebas).getPropertyValue("left")
+  );
+  let catracaLeftSaoSebas2 = parseInt(
+    window.getComputedStyle(catracaSaoSebas2).getPropertyValue("left")
   );
 
   let enemyEntulhoLeft = parseInt(
@@ -450,6 +478,60 @@ setInterval(() => {
     }
     // max.style.animation = "damage 0.25s linear 1 ";
   }
+  if (catracaLeftTagua > -130 && catracaLeftTagua < -100 && maxBottom <= 50 && !alreadyJump) {
+    if (checkCatracaTagua == false) {
+      scoreBoardCoins -= 1;
+      placar -= 327;
+      checkCatracaTagua = true;
+      damage.play();
+    }
+    // max.style.animation = "damage 0.25s linear 1 ";
+  }
+  if (catracaLeftTagua2 > -130 && catracaLeftTagua2 < -100 && maxBottom <= 50 && !alreadyJump) {
+    if (checkCatracaTagua2 == false) {
+      scoreBoardCoins -= 1;
+      placar -= 327;
+      checkCatracaTagua2 = true;
+      damage.play();
+    }
+    // max.style.animation = "damage 0.25s linear 1 ";
+  }
+  if (catracaLeftRecanto > -130 && catracaLeftRecanto < -100 && maxBottom <= 50 && !alreadyJump) {
+    if (checkCatracaRecanto == false) {
+      scoreBoardCoins -= 1;
+      placar -= 327;
+      checkCatracaRecanto = true;
+      damage.play();
+    }
+    // max.style.animation = "damage 0.25s linear 1 ";
+  }
+  if (catracaLeftRecanto2 > -130 && catracaLeftRecanto2 < -100 && maxBottom <= 50 && !alreadyJump) {
+    if (checkCatracaRecanto2 == false) {
+      scoreBoardCoins -= 1;
+      placar -= 327;
+      checkCatracaRecanto2 = true;
+      damage.play();
+    }
+    // max.style.animation = "damage 0.25s linear 1 ";
+  }
+  if (catracaLeftSaoSebas > -130 && catracaLeftSaoSebas < -100 && maxBottom <= 50 && !alreadyJump) {
+    if (checkCatracaSaoSebas == false) {
+      scoreBoardCoins -= 1;
+      placar -= 327;
+      checkCatracaSaoSebas = true;
+      damage.play();
+    }
+    // max.style.animation = "damage 0.25s linear 1 ";
+  }
+  if (catracaLeftSaoSebas2 > -130 && catracaLeftSaoSebas2 < -100 && maxBottom <= 50 && !alreadyJump) {
+    if (checkCatracaSaoSebas2 == false) {
+      scoreBoardCoins -= 1;
+      placar -= 327;
+      checkCatracaSaoSebas2 = true;
+      damage.play();
+    }
+    // max.style.animation = "damage 0.25s linear 1 ";
+  }
 
   if (worksBoardLeft > 178 && worksBoardLeft < 185 && maxBottom <= 50 && !alreadyJump) {
     if (checkWork == false) {
@@ -524,10 +606,8 @@ setInterval(() => {
     }
   }
 
-
-
   // VICTORY
-  if (count == 14800) {
+  if (count == 18000) {
     trilha.pause();
     alert(`VOTE 50100!`);
     count = 0;

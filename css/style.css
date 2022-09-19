@@ -56,6 +56,39 @@
   text-transform: uppercase;
 }
 
+.number {
+  position: relative;
+  margin-left: 8%;
+  margin-top: 5px;
+  font-size: 80px;
+  font-weight: bold;
+  color: #87CEEB;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.number2 {
+  position: relative;
+  margin-left: 40%;
+  margin-top: -100px;
+  font-size: 80px;
+  font-weight: bold;
+  color: #87CEEB;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.number3 {
+  position: relative;
+  margin-left: 75%;
+  margin-top: 190px;
+  font-size: 80px;
+  font-weight: bold;
+  color: #87CEEB;
+  text-transform: uppercase;
+  opacity: 0.2;
+}
+
 
 .money {
   position: absolute;
@@ -298,7 +331,7 @@
   right: 1200px;
   background-size: 580px;
   background-repeat: no-repeat;
-  animation: catraca 4s linear 1  36.5s;
+  animation: catraca 4s linear 1  30.5s;
 }
 
 .enemyEntulhoTagua{
@@ -741,7 +774,7 @@
   height: 95px;
   right: 1200px;
   background-repeat: no-repeat;
-  animation: catraca 6.5s linear 1 0.9s;
+  animation: catraca 6.5s linear 1 7.6s;
   rotate: 105deg;
 }
 
@@ -1767,6 +1800,30 @@
   transform: perspective(7.5cm) rotateX(15deg) rotateY(-6deg);
   animation: casa1-animation 13.8s 1 linear 93.8s;
 }
+.sds {
+  position: absolute;
+  bottom: -180px;
+  background-image: url(../images/sds.png);
+  width: 200px;
+  height: 400px;
+  right: 1200px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 8s linear 1 93.8s;
+}
+
+
+.semEnergia {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/semEnergia.png);
+  width: 200px;
+  height: 200px;
+  right: 1200px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 10s linear 1 100s;
+}
 
 .casa26 {
   position: absolute;
@@ -1887,7 +1944,7 @@
   bottom: -2px;
   transform-style: preserve-3d;
   transform: perspective(5.5cm) rotateX(15deg) rotateY(-2deg);
-  animation: towels-animation 10.7s 1 linear 116.3s;
+  animation: towels-animation 10.7s 1 linear 121.3s;
 }
 
 .catedral {
@@ -1897,7 +1954,7 @@
   right: -400px;
   transform-style: preserve-3d;
   transform: perspective(5.5cm) rotateX(15deg) rotateY(-6deg);
-  animation: catedral-animation 10s 1 linear 116.5s;
+  animation: catedral-animation 10s 1 linear 121.5s;
 
 }
 
@@ -1908,13 +1965,13 @@
   right: -400px;
   transform-style: preserve-3d;
   transform: perspective(10cm) rotateX(15deg) rotateY(-6deg);
-  animation: conic-animation 10s 1 linear 128s;
+  animation: conic-animation 10s 1 linear 129.5s;
 }
 
 .museu {
   position: absolute;
   bottom: -175px;
-  background-image: url(../images/museu.png);
+  /* background-image: url(../images/museu.png); */
   width: 500px;
   background-size: 500px;
   height: 500px;
@@ -1922,7 +1979,7 @@
   background-repeat: no-repeat;
   transform-style: preserve-3d;
   transform: perspective(8cm) rotateX(50deg) rotateY(-2deg);
-  animation: conic-animation 10s 1 linear 122s;
+  animation: conic-animation 10s 1 linear 1s;
 }
 
 .cldf {
@@ -1957,6 +2014,100 @@
   animation: casa1-animation 12.3s linear 1 109.5s;
 }
 
+.predio {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/predios.png);
+  width: 150px;
+  height: 150px;
+  right: 1200px;
+  background-size: 150px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 12.3s linear 1 112.5s;
+}
+
+.predio2 {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/predios.png);
+  width: 175px;
+  height: 175px;
+  right: 1200px;
+  background-size: 175px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 12.2s linear 1 113.9s;
+}
+.predio3 {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/predios.png);
+  width: 200px;
+  height: 200px;
+  right: 1200px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 12.3s linear 1 115.4s;
+}
+
+.miniPredio {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/predios.png);
+  width: 45px;
+  height: 45px;
+  right: 1200px;
+  background-size: 45px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 12.3s linear 1 122.2s;
+}
+.miniPredio2 {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/predios.png);
+  width: 60px;
+  height: 60px;
+  right: 1200px;
+  background-size: 60px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 12.3s linear 1 122.5s;
+}
+.miniPredio3 {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/predios.png);
+  width: 45px;
+  height: 45px;
+  right: 1200px;
+  background-size: 45px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 12.3s linear 1 122.7s;
+}
+.miniPredio4 {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/predios.png);
+  width: 90px;
+  height: 90px;
+  right: 1200px;
+  background-size: 90px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 12.3s linear 1 122s;
+}
+
+.predio4 {
+  position: absolute;
+  bottom: 0px;
+  background-image: url(../images/predios.png);
+  width: 170px;
+  height: 170px;
+  right: 1200px;
+  background-size: 170px;
+  background-repeat: no-repeat;
+  animation: casa1-animation 12.3s linear 1 124.5s;
+}
+
+
+
 .parkVerde {
   position: absolute;
   bottom: -103px;
@@ -1966,8 +2117,10 @@
   right: 1200px;
   background-size: 300px;
   background-repeat: no-repeat;
-  animation: casa1-animation 16s linear 1 112s;
+  animation: casa1-animation 16s linear 1 152s;
 }
+
+
 
 
 .arvore {
