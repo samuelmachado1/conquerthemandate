@@ -136,6 +136,14 @@ function jump() {
     }, 700);
   }
 }
+function redirect() {
+  window.confirm(`Ahhh... Que pena, você perdeu.\nTente ajudar o MAX MACIEL 50100 Novamente!!\nSua pontuação foi de ${placar} pontos`);
+
+  if (window.confirm) {
+    window.location = "https://www.maxmaciel50100.com.br/rumo_a_cldf/";
+  }
+
+}
 
 setInterval(() => {
   placar += 13;
@@ -154,10 +162,17 @@ setInterval(() => {
   if (scoreBoardCoins <= 1) {
     trilha.playbackRate = 1.3;
   }
-  if (scoreBoardCoins <= 0) {
-    trilha.pause();
-    alert(`Ahhh... Que pena, você perdeu.\nTente ajudar o MAX MACIEL 50100 Novamente!!\nSua pontuação foi de ${placar} pontos`);
+  if (scoreBoardCoins == 0) {
     count = 0;
+    trilha.pause();
+    console.log("Game Over", scoreBoardCoins);
+    // redirect();
+    window.confirm(`Ahhh... Que pena, você perdeu.\nTente ajudar o MAX MACIEL 50100 Novamente!!\nSua pontuação foi de ${placar} pontos`);
+
+    if (window.confirm) {
+      window.location = "https://www.maxmaciel50100.com.br/rumo_a_cldf/";
+    }
+
   }
 
   // Coin bonus rules
@@ -607,7 +622,7 @@ setInterval(() => {
   }
 
   // VICTORY
-  if (count == 18000) {
+  if (count >= 15300) {
     trilha.pause();
     alert(`VOTE 50100!`);
     count = 0;
